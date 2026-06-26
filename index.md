@@ -14,7 +14,7 @@ permalink: /
 
 # 23ª Escola Regional de Redes de Computadores (ERRC)
 
-### Colégio Técnico Industrial **(CTISM)** - Campus UFSM - 8 a 10 de dezembro de 2025 - Santa Maria - RS
+### Colégio Técnico Industrial **(CTISM)** - Campus UFSM - 21 a 23 de outubro de 2026 - Santa Maria - RS
 
 
 <!--  <a href="https://sol.sbc.org.br/index.php/errc/issue/view/1610"
