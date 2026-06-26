@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="text-center my-5">
-  <img src="{{ '/assets/img/569437_SE6-0806_25A_UNISENAC_LOGO_ERRC.png' | relative_url }}" 
+  <img src="{{ '/assets/img/LOGO-ERRC-2026.png' | relative_url }}" 
        alt="Logo ERRC 2026" 
        class="img-fluid"
        style="max-width: 450px; width: 100%;">
