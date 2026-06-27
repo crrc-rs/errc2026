@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERRC 2026 - Localização e informações úteis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
+        html { scroll-behavior: smooth; }
+
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: #04294f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
+        nav a:hover { background: #3a71c4; }
+
+        .banner { 
+            text-align: center; 
+            padding: 60px 20px; 
+            background: linear-gradient(135deg, #04294f 0%, #1a5c9e 100%); 
+            color: white; 
+        }
+        .banner h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        main { padding: 40px 10%; max-width: 1200px; margin: auto; }
+        
+        .tabs-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+        }
+        
+        .tab-btn:hover {
+            color: #3a71c4;
+        }
+        
+        .tab-btn.active {
+            color: #04294f;
+            border-bottom-color: #3a71c4;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .info-section { margin-bottom: 40px; }
+        .info-section h2 { color: #04294f; border-bottom: 3px solid #3a71c4; display: inline-block; margin-bottom: 25px; padding-bottom: 5px; }
+        .info-section h3 { color: #1a5c9e; margin: 20px 0 15px 0; font-size: 1.4rem; }
+
+        .grid-info { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .location-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 5px solid #3a71c4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .location-card h3 { color: #1a5c9e; margin-bottom: 8px; font-size: 1.2rem; }
+        .location-card p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+        .location-card .address { font-style: italic; margin-top: auto; display: block; color: #888; }
+
+        .badge {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            color: white;
+        }
+        .badge-baixo { background-color: #2e7d32; } 
+        .badge-medio { background-color: #ef6c00; } 
+        .badge-alto { background-color: #c62828; }  
+        .badge-info { background-color: #04294f; } 
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: #ddd;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        footer { 
+            padding: 60px 20px 40px 20px; 
+            background: #04294f; 
+            color: white; 
+            margin-top: 60px; 
+            font-size: 0.95rem;
+        }
+        
+        .footer-parceiros {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .footer-parceiros h3 {
+            font-size: 1rem;
+            color: #3a71c4;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .grid-parceiros { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 45px; }
+        
+        .logo-parceiro {
+            max-height: 95px; 
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.3s; 
+        }
+        .logo-parceiro:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .footer-info {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-texto {
+            text-align: left;
+        }
+        .footer-texto p { opacity: 0.8; margin-bottom: 4px; }
+        .footer-texto p:last-child { margin-bottom: 0; }
+        .footer-texto strong { opacity: 1; color: #3a71c4; }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+        .instagram-link svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+        .instagram-link:hover {
+            color: #e1306c;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 992px) {
+            header { padding: 1.5rem 5%; }
+            main { padding: 30px 5%; }
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+            nav a { margin-left: 0; font-size: 0.85rem; }
+            
+            .banner h1 { font-size: 1.8rem; }
+            .tabs-nav { justify-content: center; }
+            .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
+            .grid-parceiros { gap: 25px; }
+            .logo-parceiro { max-height: 65px; }
+
+            .footer-info {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .footer-texto {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <strong style="font-size: 1.5rem; letter-spacing: 1px;">ERRC 2026</strong>
+        </div>
+        <nav aria-label="Menu Principal">
+            <a href="index.html">Início</a>
+            <a href="Sobre.html">Sobre</a>
+            <a href="Localizacao.html" style="background: #3a71c4;">Localização</a>
+            <a href="Programacao.html">Programação</a>
+            <a href="Inscricoes.html">Inscrições</a>
+            <a href="Organizacao.html">Organização</a>
+            <a href="Contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h1>Localização e Utilidades</h1>
+        <p>O evento ocorrerá no campus da UFSM em Santa Maria, RS.</p>
+    </section>
+
+    <main>
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="alterarAba(event, 'aba-chegar')">📍 Como Chegar</button>
+            <button class="tab-btn" onclick="alterarAba(event, 'aba-restaurantes')">🍽️ Lanchonetes & Restaurantes</button>
+            <button class="tab-btn" onclick="alterarAba(event, 'aba-hoteis')">🏨 Hotéis Próximos</button>
+            <button class="tab-btn" onclick="alterarAba(event, 'aba-hospitais')">🚑 Hospitais & Emergência</button>
+        </div>
+
+        <div id="aba-chegar" class="tab-panel active">
+            <section class="info-section">
+                <h2>Como Chegar</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.293925794387!2d-53.71971122551356!3d-29.711244075093052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503b5e705d63467%3A0x3d0ea46b1a86827c!2sCTISM%20-%20Col%C3%A9gio%20T%C3%A9cnico%20Industrial%20de%20Santa%20Maria!5e0!3m2!1spt-BR!2sbr!4v1777927671545!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p style="margin-bottom: 25px;">O ERRC 2026 será sediado no Colégio Técnico Industrial de Santa Maria (CTISM) da UFSM, no bairro Camobi.</p>
+                
+                <h3>Opções de Transporte</h3>
+                <div class="grid-info">
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-baixo">Urbano: R$ 7,25</span>
+                            <h3>Ônibus Coletivo Público</h3>
+                            <p>As linhas <strong>Universidade</strong> ou <strong>Camobi</strong> saem do Centro Histórico (Gare, arredores do colégio estadual Manuel Ribas) ou do Bairro Tancredo Neves e deixam você diretamente dentro do campus da UFSM.</p>
+                        </div>
+                        <span class="address">Passagem: R$ 7,25 (Aceita cartão local e dinheiro)</span>
+                    </div>
+
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-medio">Intermunicipal</span>
+                            <h3>Ônibus de Viagem / Rodoviária</h3>
+                            <p>Principais viações conectando a cidade: <strong>Planalto Transportes</strong> e <strong>Viação Ouro e Prata</strong>. Passagens de Porto Alegre para Santa Maria giram em torno de <strong>R$ 110,00 a R$ 145,00</strong> dependendo do serviço (comum ou leito).</p>
+                        </div>
+                        <span class="address">Desembarque na Estação Rodoviária de SM</span>
+                    </div>
+
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-alto">Aéreo</span>
+                            <h3>Aeroporto de Santa Maria (RIA)</h3>
+                            <p>Para quem vem de outros states, o aeroporto local opera voos regulares que realizam a conexão direta com o <strong>Aeroporto Internacional de Porto Alegre (POA)</strong>.</p>
+                        </div>
+                        <span class="address">Localizado na foz do bairro Camobi, perto da UFSM</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="aba-restaurantes" class="tab-panel">
+            <section class="info-section">
+                <h2>Lanchonetes e Restaurantes</h2>
+                <div class="grid-info">
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-baixo">Orçamento: Baixo</span>
+                            <h3>Restaurante Universitário (RU)</h3>
+                            <p>Opção principal dentro do campus (verifique os horários para visitantes).</p>
+                        </div>
+                        <span class="address">Campus UFSM - Próximo à Reitoria</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-info">No Campus</span>
+                            <h3>Oba! Lanches</h3>
+                            <p>Excelente opção para salgados assados, sucos naturais, cafés e refeições rápidas nos intervalos das programações.</p>
+                        </div>
+                        <span class="address">Proximidades do Centro de Tecnologia (CT)</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-info">No Campus</span>
+                            <h3>Cosmopolita</h3>
+                            <p>Oferece uma ótima variedade de cafés expressos, doces finos, salgados e pratos executivos diários rápidos.</p>
+                        </div>
+                        <span class="address">Centro de Tecnologia (CT)</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-medio">No Campus</span>
+                            <h3>Santo Garden</h3>
+                            <p>Espaço diferenciado com ambiente agradável focado em lanches especiais, cafés e opções integradas à rotina local.</p>
+                        </div>
+                        <span class="address">Anexado ao Prédio do INPE (proximidades do CTISM)</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-medio">Orçamento: Médio</span>
+                            <h3>Shopping Camobi</h3>
+                            <p>Diversas opções de fast-food, lanches e almoço executivo em ambiente coberto.</p>
+                        </div>
+                        <span class="address">Av. Prefeito Evandro Behr, Camobi</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-baixo">Orçamento: Baixo</span>
+                            <h3>Avenida Lanches</h3>
+                            <p>Famoso pelos "Xis" tradicionais e gigantes de Santa Maria.</p>
+                        </div>
+                        <span class="address">Av. Prefeito Evandro Behr, 5900</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="aba-hoteis" class="tab-panel">
+            <section class="info-section">
+                <h2>Hotéis Próximos</h2>
+                <div class="grid-info">
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-medio">Orçamento: Médio</span>
+                            <h3>Park Hotel Morotin</h3>
+                            <p>Localizado próximo à entrada da UFSM, ideal para congressistas pela facilidade de acesso.</p>
+                        </div>
+                        <span class="address">RST-287, Km 239 - Camobi</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-baixo">Orçamento: Baixo</span>
+                            <h3>Hotel Paraíso</h3>
+                            <p>Opção econômica, simples e muito próxima ao campus universitário.</p>
+                        </div>
+                        <span class="address">Av. Prefeito Evandro Behr - Camobi</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <span class="badge badge-alto">Orçamento: Alto</span>
+                            <h3>Itaimbé Palace Hotel</h3>
+                            <p>Opção tradicional no centro da cidade, com ótima estrutura e fácil acesso via ônibus (Linha UFSM).</p>
+                        </div>
+                        <span class="address">Rua Venâncio Aires, 2741 - Centro</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="aba-hospitais" class="tab-panel">
+            <section class="info-section">
+                <h2>Hospitais e Emergência</h2>
+                <div class="grid-info">
+                    <div class="location-card">
+                        <div>
+                            <h3>HUSM (Hospital Universitário)</h3>
+                            <p>Hospital público de referência regional, localizado dentro do próprio campus da UFSM.</p>
+                        </div>
+                        <span class="address">Campus UFSM - Camobi</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <h3>Complexo Hospitalar Astrogildo de Azevedo</h3>
+                            <p>Principal hospital privado e de convênios médicos da cidade.</p>
+                        </div>
+                        <span class="address">Rua Floriano Peixoto, 1750 - Centro</span>
+                    </div>
+                    <div class="location-card">
+                        <div>
+                            <h3>UPA 24h</h3>
+                            <p>Unidade de Pronto Atendimento municipal para casos rápidos de urgência.</p>
+                        </div>
+                        <span class="address">Rua Ary de Moraes - Bairro Perpétuo Socorro</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-parceiros">
+            <h3>Realização</h3>
+            <div class="grid-parceiros">
+                <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                <img class="logo-parceiro" src="imagens/ctism_logo.png" alt="Logo CTISM">
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-texto">
+                <p>Organização: <strong>CTISM / UFSM</strong> - Santa Maria, RS</p>
+                <p>&copy; 2026 ERRC - Escola Regional de Redes de Computadores.</p>
+            </div>
+            
+            <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function alterarAba(evento, idAba) {
+            const paineis = document.querySelectorAll('.tab-panel');
+            paineis.forEach(painel => {
+                painel.classList.remove('active');
+            });
+
+            const botoes = document.querySelectorAll('.tab-btn');
+            botoes.forEach(botao => {
+                botao.classList.remove('active');
+            });
+
+            document.getElementById(idAba).classList.add('active');
+            evento.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
