@@ -10,7 +10,34 @@
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
         html { scroll-behavior: smooth; }
 
-        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: #04294f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0.5rem 10%; 
+            background: #04294f; 
+            color: white; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 110px; 
+            width: auto;
+            display: block;
+            padding: 5px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.03); 
+        }
         nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
         nav a:hover { background: #3a71c4; }
         
@@ -144,7 +171,20 @@
             margin: 0 auto 40px auto;
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-coluna {
+            flex: 1;
             text-align: center;
+        }
+
+        .footer-coluna-realizacao {
+            border-right: 1px solid rgba(255, 255, 255, 0.1); 
+            padding-right: 40px;
         }
         
         .footer-parceiros h3 {
@@ -152,20 +192,22 @@
             color: #3a71c4;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 700;
         }
 
         .footer-info {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 30px; 
+            text-align: center;
         }
         
         .footer-texto {
-            text-align: left;
+            text-align: center;
         }
         .footer-texto p { opacity: 0.8; margin-bottom: 4px; }
         .footer-texto p:last-child { margin-bottom: 0; }
@@ -178,10 +220,11 @@
             color: rgba(255, 255, 255, 0.7);
             transition: 0.3s ease;
             text-decoration: none;
+            flex-shrink: 0;
         }
         .instagram-link svg {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             fill: currentColor;
         }
         .instagram-link:hover {
@@ -197,20 +240,34 @@
 
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; padding: 1.5rem 20px; }
-            nav { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+            .logo { margin-bottom: 15px; }
+            .logo img { max-height: 90px; } 
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
             nav a { margin-left: 0; font-size: 0.9rem; padding: 5px 8px; }
+            
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
             .logo-parceiro { max-height: 65px; } 
             
-            .footer-info {
+            .footer-parceiros {
                 flex-direction: column;
-                gap: 20px;
-                text-align: center;
+                gap: 40px;
             }
-            .footer-texto {
-                text-align: center;
+            .footer-coluna-realizacao {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+                padding-right: 0;
+                padding-bottom: 40px;
+                width: 100%;
+            }
+            .footer-coluna {
+                width: 100%;
+            }
+
+            .footer-info {
+                flex-direction: column-reverse;
+                gap: 20px;
             }
         }
     </style>
@@ -218,8 +275,10 @@
 <body>
 
     <header>
-         <div class="logo">
-            <strong style="font-size: 1.5rem; letter-spacing: 1px;">ERRC 2026</strong>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
+            </a>
         </div>
         <nav aria-label="Menu Principal">
             <a href="index.html" style="background: #3a71c4;">Início</a>
@@ -249,7 +308,7 @@
                     A <strong>Escola Regional de Redes de Computadores (ERRC)</strong> é um evento promovido anualmente pela Sociedade Brasileira de Computação (SBC). Em sua 23ª edição, o evento será sediado no Colégio Técnico Industrial de Santa Maria (CTISM) na Universidade Federal de Santa Maria (UFSM).
                 </p>
                 <p>
-                    O objetivo da ERRC é promover a divulgação de resultados de pesquisas acadêmicas e técnicas, bem como propiciar a troca de experiências entre pesquisadores, professionals, professores e estudantes atuantes nas áreas de Redes de Computadores, Sistemas Distribuídos, Segurança Cibernética e tópicos correlatos.
+                    O objetivo da ERRC é promover a divulgação de resultados de pesquisas acadêmicas e técnicas, bem como propiciar a troca de experiências entre pesquisadores, profissionais, professores e estudantes atuantes nas áreas de Redes de Computadores, Sistemas Distribuídos, Segurança Cibernética e tópicos correlatos.
                 </p>
                 <p>
                     A programação contará com palestras de especialistas renomados, minicursos práticos, além das sessões técnicas para apresentação de artigos selecionados.
@@ -322,10 +381,21 @@
 
     <footer>
         <div class="footer-parceiros">
-            <h3>Realização</h3>
-            <div class="grid-parceiros">
-                <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
-                <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+            <div class="footer-coluna footer-coluna-realizacao">
+                <h3>Realização</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                    <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Apoio</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
+                    <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
+                    <img class="logo-parceiro" src="https://lirp.cdn-website.com/705f6f12/dms3rep/multi/opt/UNISINOS---Posi-1920w.png" alt="Logo UNISINOS">
+                </div>
             </div>
         </div>
 
