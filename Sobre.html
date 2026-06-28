@@ -10,10 +10,32 @@
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
         html { scroll-behavior: smooth; }
 
-        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: #04294f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
-        nav a:hover { background: #3a71c4; }
-        
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0.5rem 10%; 
+            background: #04294f; 
+            color: white; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 110px; 
+            width: auto;
+            display: block;
+            padding: 5px 0;
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover { transform: scale(1.03); }
+
         nav a { 
             color: white; 
             text-decoration: none; 
@@ -25,7 +47,7 @@
         }
         nav a:hover { background: #3a71c4; }
 
-         .banner { 
+        .banner { 
             text-align: center; 
             padding: 60px 20px; 
             background: linear-gradient(135deg, #04294f 0%, #1a5c9e 100%); 
@@ -148,7 +170,20 @@
             margin: 0 auto 40px auto;
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-coluna {
+            flex: 1;
             text-align: center;
+        }
+
+        .footer-coluna-realizacao {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            padding-right: 40px;
         }
         
         .footer-parceiros h3 {
@@ -156,7 +191,7 @@
             color: #3a71c4;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 700;
         }
 
@@ -181,15 +216,16 @@
         }
 
         .footer-info {
-            max-width: 1200px;
+            max-width: 600px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 30px;
         }
         
         .footer-texto {
-            text-align: left;
+            text-align: center;
         }
         .footer-texto p { opacity: 0.8; margin-bottom: 4px; }
         .footer-texto p:last-child { margin-bottom: 0; }
@@ -202,10 +238,11 @@
             color: rgba(255, 255, 255, 0.7);
             transition: 0.3s ease;
             text-decoration: none;
+            flex-shrink: 0;
         }
         .instagram-link svg {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             fill: currentColor;
         }
         .instagram-link:hover {
@@ -223,21 +260,33 @@
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            nav { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; }
+            header { flex-direction: column; text-align: center; padding: 1.5rem 20px; }
+            .logo { margin-bottom: 15px; }
+            .logo img { max-height: 90px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; }
             nav a { margin: 5px; font-size: 0.9rem; }
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
             .logo-parceiro { max-height: 65px; }
             
-            .footer-info {
+            .footer-parceiros {
                 flex-direction: column;
-                gap: 20px;
-                text-align: center;
+                gap: 40px;
             }
-            .footer-texto {
-                text-align: center;
+            .footer-coluna-realizacao {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding-right: 0;
+                padding-bottom: 40px;
+                width: 100%;
+            }
+            .footer-coluna {
+                width: 100%;
+            }
+            .footer-info {
+                flex-direction: column-reverse;
+                gap: 20px;
             }
         }
     </style>
@@ -246,7 +295,9 @@
 
     <header>
         <div class="logo">
-            <strong style="font-size: 1.5rem; letter-spacing: 1px;">ERRC 2026</strong>
+            <a href="index.html">
+                <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
+            </a>
         </div>
         <nav aria-label="Menu Principal">
             <a href="index.html">Início</a>
@@ -272,7 +323,7 @@
                 Promovida anualmente pela <strong>Sociedade Brasileira de Computação (SBC)</strong>, a ERRC consolidou-se, ao longo de mais de duas décadas, como um dos pilares mais importantes para o desenvolvimento tecnológico e científico da Região Sul do Brasil. O evento funciona como uma plataforma itinerante que conecta de forma orgânica o ecossistema acadêmico ao setor produtivo.
             </p>
             <p>
-                Além de descentralizar o debate sobre alta tecnologia levando discussões de nível internacional para diferentes polos universitários, a escola desempenha um papel estratégico na retenção de talentos e no estímulo à pesquisa regional. É o space ideal para que novos pesquisadores publiquem seus trabalhos e recebam feedbacks valiosos de profissionais seniores da área.
+                Além de descentralizar o debate sobre alta tecnologia levando discussões de nível internacional para diferentes polos universitários, a escola desempenha um papel estratégico na retenção de talentos e no estímulo à pesquisa regional. É o espaço ideal para que novos pesquisadores publiquem seus trabalhos e recebam feedbacks valiosos de profissionais seniores da área.
             </p>
         </section>
 
@@ -314,7 +365,7 @@
                 </div>
                 <div class="bloco-info-imagem">
                     <img src="https://www.ufsm.br/app/uploads/sites/360/2020/02/Campus-UFSM_foto-Pantaleao-1024x683.jpg" alt="Campus da UFSM">
-                    <p class="legenda-imagem">O dinâmico campus da UFSM em Camobi, conhecido por sua grande extensão e harmonia com a natureza.</p>
+                    <p class="legenda-imagem">O dinâmico campus da UFSM in Camobi, conhecido por sua grande extensão e harmonia com a natureza.</p>
                 </div>
             </div>
 
@@ -335,13 +386,24 @@
 
     <footer>
         <div class="footer-parceiros">
-            <h3>Realização</h3>
-            <div class="grid-parceiros">
-                <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
-                <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+            <div class="footer-coluna footer-coluna-realizacao">
+                <h3>Realização</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                    <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3>Apoio</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
+                    <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
+                    <img class="logo-parceiro" src="https://lirp.cdn-website.com/705f6f12/dms3rep/multi/opt/UNISINOS---Posi-1920w.png" alt="Logo UNISINOS">
+                </div>
             </div>
         </div>
-        
+
         <div class="footer-info">
             <div class="footer-texto">
                 <p>Organização: <strong>CTISM / UFSM</strong> - Santa Maria, RS</p>
