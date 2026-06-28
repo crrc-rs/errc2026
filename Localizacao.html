@@ -11,7 +11,34 @@
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
         html { scroll-behavior: smooth; }
 
-        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: #04294f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+       header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0.5rem 10%; 
+            background: #04294f; 
+            color: white; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 110px;
+            width: auto;
+            display: block;
+            padding: 5px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.03);
+        }
         nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
         nav a:hover { background: #3a71c4; }
 
@@ -134,7 +161,19 @@
             margin: 0 auto 40px auto;
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .bloco-parceiros {
+            flex: 1;
             text-align: center;
+            padding: 0 20px;
+        }
+
+        .bloco-parceiros.realizadores {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .footer-parceiros h3 {
@@ -149,7 +188,7 @@
         .grid-parceiros { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 45px; }
         
         .logo-parceiro {
-            max-height: 95px; 
+            max-height: 80px; 
             width: auto;
             filter: grayscale(100%);
             opacity: 0.7;
@@ -164,12 +203,14 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 30px;
+            text-align: center;
         }
         
         .footer-texto {
-            text-align: left;
+            text-align: center;
         }
         .footer-texto p { opacity: 0.8; margin-bottom: 4px; }
         .footer-texto p:last-child { margin-bottom: 0; }
@@ -184,8 +225,8 @@
             text-decoration: none;
         }
         .instagram-link svg {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             fill: currentColor;
         }
         .instagram-link:hover {
@@ -199,23 +240,36 @@
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
-            nav a { margin-left: 0; font-size: 0.85rem; }
+            header { flex-direction: column; text-align: center; padding: 1.5rem 20px; }
+            .logo { margin-bottom: 15px; }
+            .logo img { max-height: 90px; } 
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+            nav a { margin-left: 0; font-size: 0.9rem; padding: 5px 8px; }
             
             .banner h1 { font-size: 1.8rem; }
             .tabs-nav { justify-content: center; }
             .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
+            
+            .footer-parceiros {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .bloco-parceiros {
+                width: 100%;
+                padding: 0;
+            }
+            .bloco-parceiros.realizadores {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 40px;
+            }
+
             .grid-parceiros { gap: 25px; }
             .logo-parceiro { max-height: 65px; }
 
             .footer-info {
                 flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            .footer-texto {
-                text-align: center;
+                gap: 15px;
             }
         }
     </style>
@@ -224,7 +278,9 @@
 
     <header>
         <div class="logo">
-            <strong style="font-size: 1.5rem; letter-spacing: 1px;">ERRC 2026</strong>
+            <a href="index.html">
+                <img class="logo-header" src="assets/img/logo_errc_2026.png" alt="ERRC 2026">
+            </a>
         </div>
         <nav aria-label="Menu Principal">
             <a href="index.html">Início</a>
@@ -410,17 +466,28 @@
 
     <footer>
         <div class="footer-parceiros">
-            <h3>Realização</h3>
-            <div class="grid-parceiros">
-                <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
-                <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+            <div class="bloco-parceiros realizadores">
+                <h3>Realização</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                    <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+                </div>
+            </div>
+            
+            <div class="bloco-parceiros apoiadores">
+                <h3>Apoiadores</h3>
+                <div class="grid-parceiros">
+                    <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
+                    <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
+                    <img class="logo-parceiro" src="https://lirp.cdn-website.com/705f6f12/dms3rep/multi/opt/UNISINOS---Posi-1920w.png" alt="Logo UNISINOS">
+                </div>
             </div>
         </div>
 
         <div class="footer-info">
             <div class="footer-texto">
                 <p>Organização: <strong>CTISM / UFSM</strong> - Santa Maria, RS</p>
-                <p>&copy; 2026 ERRC - Escola Regional de Redes de Computadores.</p>
+                <p>© 2026 ERRC - Escola Regional de Redes de Computadores.</p>
             </div>
             
             <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
