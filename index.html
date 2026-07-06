@@ -202,7 +202,7 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            align-items: stretch;
+            align-items: flex-start; 
             gap: 30px;
         }
 
@@ -215,7 +215,6 @@
             padding: 0 15px;
         }
 
-        /* Divisórias entre colunas no desktop */
         .footer-coluna:not(:last-child) {
             border-right: 1px solid rgba(255, 255, 255, 0.15);
         }
@@ -250,16 +249,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            height: 100%;
+            gap: 20px;
+            width: 100%;
+            margin-top: 5px;
         }
 
         .logo-footer-remoto {
-            max-height: 65px;
+            max-height: 55px; 
             width: auto;
             opacity: 0.8;
             transition: 0.3s;
+        }
+        .logo-footer-remoto:hover {
+            opacity: 1;
         }
 
         .instagram-link {
@@ -435,12 +437,10 @@
                 <img class="logo-parceiro" src="https://lirp.cdn-website.com/705f6f12/dms3rep/multi/opt/UNISINOS---Posi-1920w.png" alt="Logo UNISINOS">
                 <img class="logo-parceiro" src="https://play-lh.googleusercontent.com/Nh_MB-F-dOv6sIjWMv9P3-t2bxountkNPeippQdMeS-aVlyR0Bp75MLg_VhR-OQW6g" alt="Logo CESLA">
             </div>
-            
-            <h3>Realização</h3>
-            <!--<div class="grid-parceiros">
+            <!--<h3>Realização</h3>
+            <div class="grid-parceiros">
                 <img class="logo-parceiro" src="assets/img/sbc_logo.png" alt="Logo SBC">
             </div>-->
-
             <h3>Organização</h3>
             <div class="grid-parceiros">
                 <img class="logo-parceiro" src="assets/img/ufsm_logo.png" alt="Logo UFSM">
@@ -455,7 +455,6 @@
                 <h3>Realização</h3>
                 <!--<img class="logo-footer-remoto" src="assets/img/sbc_logo.png" alt="Logo SBC">-->
                 </div>
-            </div>
 
             <div class="footer-coluna">
                 <h3>Organização</h3>
@@ -468,10 +467,8 @@
             <div class="footer-coluna">
                 <h3>Contato</h3>
                 <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
-                <p><strong>Dúvidas organizais:</strong> <a href="mailto:sceolin@redes.ufsm.br">sceolin@redes.ufsm.br</a></p>
-                <p><strong>Dúvidas organizais:</strong> <a href="#">(aqui irá o email da ERRC)</a></p>
-                </div>
-
+                <p><strong>Dúvidas organizacionais:</strong> <a href="mailto:sceolin@redes.ufsm.br">sceolin@redes.ufsm.br</a></p>
+                <p><strong>Dúvidas gerais:</strong> <a href="#">(aqui irá o email da ERRC)</a></p>
                 <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
                     <svg viewBox="0 0 24 24">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -481,7 +478,7 @@
         </div>
 
         <div class="footer-copyright">
-            <p>&copy; 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
+            <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
