@@ -40,6 +40,35 @@
 
         nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
         nav a:hover { background: #3a71c4; }
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+
+ .linkedin-header-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #0077b5;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 25px;
+            transition: 0.3s ease;
+        }
+        .linkedin-header-btn:hover {
+            background: #005a8a;
+            transform: translateY(-1px);
+        }
+        .linkedin-header-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
 
         .banner { 
             text-align: center; 
@@ -98,95 +127,107 @@
         .btn-action:hover { transform: translateY(-3px); opacity: 0.9; }
 
         footer { 
-            padding: 60px 20px 40px 20px; 
+            padding: 50px 10% 30px 10%; 
             background: #04294f; 
             color: white; 
-            margin-top: 80px; 
-            font-size: 0.95rem;
+            margin-top: 60px; 
+            font-size: 0.9rem;
         }
         
-        .footer-parceiros {
+        .footer-container {
             max-width: 1200px;
-            margin: 0 auto 40px auto;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: flex-start; 
+            gap: 30px;
         }
 
-        .bloco-parceiros {
+        .footer-coluna {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 15px;
         }
 
-        .bloco-parceiros.realizadores {
-            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        .footer-coluna:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.15);
         }
         
-        .footer-parceiros h3 {
-            font-size: 1rem;
+        footer h3 {
+            font-size: 0.95rem;
             color: #3a71c4;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-bottom: 20px;
             font-weight: 700;
-        }
-        
-        .grid-parceiros { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            flex-wrap: wrap; 
-            gap: 45px; 
-        }
-        
-        .logo-parceiro {
-            max-height: 80px; 
-            width: auto;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .logo-parceiro:hover {
-            filter: grayscale(0%);
-            opacity: 1;
+            width: 100%;
         }
 
-        .footer-info {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-coluna p {
+            opacity: 0.85;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-coluna a {
+            color: #3a71c4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-coluna a:hover {
+            text-decoration: underline;
+        }
+
+        .logos-lado-a-lado {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            text-align: center;
+            gap: 20px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .logo-footer-remoto {
+            max-height: 95px; 
+            width: auto;
+            opacity: 0.8;
+            transition: 0.3s;
         }
         
-        .footer-texto {
-            text-align: center;
+        .logo-footer-remoto:hover {
+            opacity: 1;
         }
-        .footer-texto p { opacity: 0.8; margin-bottom: 4px; }
-        .footer-texto p:last-child { margin-bottom: 0; }
-        .footer-texto strong { opacity: 1; color: #3a71c4; }
 
         .instagram-link {
+            margin-top: 15px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             color: rgba(255, 255, 255, 0.7);
             transition: 0.3s ease;
-            text-decoration: none;
         }
         .instagram-link svg {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             fill: currentColor;
         }
         .instagram-link:hover {
-            color: #e1306c;
+            color: #e1306c; 
             transform: scale(1.1);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            opacity: 0.6;
+            width: 100%;
         }
 
         @media (max-width: 992px) {
@@ -200,31 +241,22 @@
             .logo img { max-height: 90px; } 
             nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
             nav a { margin-left: 0; font-size: 0.9rem; padding: 5px 8px; }
-
+            .linkedin-header-btn { margin-left: 0; }
             .topics-list { column-count: 1; }
             .btn-action { width: 100%; margin-right: 0; margin-bottom: 10px; }
             .banner h1 { font-size: 1.8rem; }
             
-            .footer-parceiros {
+            .footer-container {
                 flex-direction: column;
                 gap: 40px;
             }
-            .bloco-parceiros {
+            .footer-coluna {
                 width: 100%;
-                padding: 0;
+                padding: 0 0 30px 0;
             }
-            .bloco-parceiros.realizadores {
+            .footer-coluna:not(:last-child) {
                 border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-                padding-bottom: 40px;
-            }
-
-            .grid-parceiros { gap: 25px; }
-            .logo-parceiro { max-height: 65px; } 
-
-            .footer-info {
-                flex-direction: column;
-                gap: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             }
         }
     </style>
@@ -234,20 +266,26 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img class="logo-header" src="assets/img/logo_errc_2026.png" alt="ERRC 2026">
+                <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
             </a>
         </div>
-        <nav aria-label="Menu Principal">
-            <a href="index.html">Início</a>
-            <a href="Sobre.html">Sobre</a>
-            <a href="Localizacao.html">Localização</a>
-            <a href="Programacao.html">Programação</a>
-            <a href="Inscricoes.html" style="background: #3a71c4;">Inscrições</a>
-            <a href="Organizacao.html">Organização</a>
-            <a href="Contato.html">Contato</a>
-        </nav>
+        <div class="nav-container">
+            <nav aria-label="Menu Principal">
+                <a href="index.html">Início</a>
+                <a href="Sobre.html">Sobre</a>
+                <a href="Localizacao.html">Localização</a>
+                <a href="Programacao.html">Programação</a>
+                <a href="Inscricoes.html" style="background: #3a71c4;">Inscrições</a>
+                <a href="Organizacao.html">Organização</a>
+            </nav>
+            <a href="https://linkedin.com/company/escoladeredes-errc/" target="_blank" class="linkedin-header-btn" aria-label="LinkedIn da ERRC">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
     </header>
-
     <section class="banner">
         <h1>Inscrições e Submissões</h1>
         <p>Participe ativamente da ERRC 2026 enviando seu trabalho ou realizando sua inscrição.</p>
@@ -349,36 +387,35 @@
     </main>
 
     <footer>
-        <div class="footer-parceiros">
-            <div class="bloco-parceiros realizadores">
+        <div class="footer-container">
+            <div class="footer-coluna">
                 <h3>Realização</h3>
-                <div class="grid-parceiros">
-                    <img class="logo-parceiro" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
-                    <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+                <!--<img class="logo-footer-remoto" src="assets/img/sbc_logo.png" alt="Logo SBC">-->
+                </div>
+
+            <div class="footer-coluna">
+                <h3>Organização</h3>
+                <div class="logos-lado-a-lado">
+                    <img class="logo-footer-remoto" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                    <img class="logo-footer-remoto" src="assets/img/ctism_logo.png" alt="Logo CTISM">
                 </div>
             </div>
-            
-            <div class="bloco-parceiros apoiadores">
-                <h3>Apoio</h3>
-                <div class="grid-parceiros">
-                    <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
-                    <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
-                    <img class="logo-parceiro" src="https://lirp.cdn-website.com/705f6f12/dms3rep/multi/opt/UNISINOS---Posi-1920w.png" alt="Logo UNISINOS">
-                </div>
+
+            <div class="footer-coluna">
+                <h3>Contato</h3>
+                <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
+                <p><strong>Dúvidas organizacionais:</strong><br> <a href="mailto:sceolin@redes.ufsm.br">sceolin@redes.ufsm.br</a></p>
+                <p><strong>Dúvidas gerais:</strong><br> <a href="#">(aqui irá o email da ERRC)</a></p>
+                <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </a>
             </div>
         </div>
 
-        <div class="footer-info">
-            <div class="footer-texto">
-                <p>Organização: <strong>CTISM / UFSM</strong> - Santa Maria, RS</p>
-                <p>&copy; 2026 ERRC - Escola Regional de Redes de Computadores.</p>
-            </div>
-            
-            <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
-            </a>
+        <div class="footer-copyright">
+            <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
