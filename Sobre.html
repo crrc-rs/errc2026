@@ -22,6 +22,25 @@
             position: relative;
             z-index: 10;
         }
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 110px; 
+            width: auto;
+            display: block;
+            padding: 5px 0;
+            transition: transform 0.3s ease;
+        }
+       .logo img:hover { transform: scale(1.03); }
+       
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
         .linkedin-header-btn {
             display: inline-flex;
             align-items: center;
@@ -45,20 +64,7 @@
             height: 16px;
             fill: currentColor;
         }
-        .logo a {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            max-height: 110px; 
-            width: auto;
-            display: block;
-            padding: 5px 0;
-            transition: transform 0.3s ease;
-        }
-        .logo img:hover { transform: scale(1.03); }
-
+        
         nav a { 
             color: white; 
             text-decoration: none; 
@@ -69,7 +75,6 @@
             border-radius: 4px;
         }
         nav a:hover { background: #3a71c4; }
-
         .banner { 
             text-align: center; 
             padding: 60px 20px; 
