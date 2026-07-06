@@ -21,7 +21,29 @@
             position: relative;
             z-index: 10;
         }
-
+        .linkedin-header-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #0077b5;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 25px;
+            transition: 0.3s ease;
+        }
+        .linkedin-header-btn:hover {
+            background: #005a8a;
+            transform: translateY(-1px);
+        }
+        .linkedin-header-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
         .logo a {
             display: flex;
             align-items: center;
@@ -296,6 +318,7 @@
             .logo img { max-height: 90px; }
             nav { display: flex; flex-wrap: wrap; justify-content: center; }
             nav a { margin: 5px; font-size: 0.9rem; }
+            .linkedin-header-btn { margin-left: 0; }
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
@@ -328,14 +351,22 @@
                 <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
             </a>
         </div>
-        <nav aria-label="Menu Principal">
-            <a href="index.html">Início</a>
-            <a href="Sobre.html" style="background: #3a71c4;">Sobre</a>
-            <a href="Localizacao.html">Localização</a>
-            <a href="Programacao.html">Programação</a>
-            <a href="Inscricoes.html">Inscrições</a>
-            <a href="Organizacao.html">Organização</a>
-        </nav>
+        <div class="nav-container">
+            <nav aria-label="Menu Principal">
+                <a href="index.html" style="background: #3a71c4;">Início</a>
+                <a href="Sobre.html">Sobre</a>
+                <a href="Localizacao.html">Localização</a>
+                <a href="Programacao.html">Programação</a>
+                <a href="Inscricoes.html">Inscrições</a>
+                <a href="Organizacao.html">Organização</a>
+            </nav>
+            <a href="https://linkedin.com/company/escoladeredes-errc/" target="_blank" class="linkedin-header-btn" aria-label="LinkedIn da ERRC">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
     </header>
 
     <section class="banner">
