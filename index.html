@@ -188,6 +188,18 @@
             filter: grayscale(0%);
             opacity: 1;
         }
+        
+        .logo-org {
+            max-height: 115px; 
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .logo-org:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
 
         footer { 
             padding: 50px 10% 30px 10%; 
@@ -317,6 +329,7 @@
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
             .logo-parceiro { max-height: 65px; } 
+            .logo-org { max-height: 75px; } 
             
             .footer-container {
                 flex-direction: column;
@@ -426,10 +439,10 @@
 
         <section class="secao-parceiros">
             <h2>Organização e Parceiros</h2>
-
-            <h3>Apoio</h3>
+             <h3>Organização</h3>
             <div class="grid-parceiros">
-                <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
+                <img class="logo-org" src="assets/img/ufsm_logo.png" alt="Logo UFSM">
+                <img class="logo-org" src="assets/img/ctism_logo.png" alt="Logo CTISM">
             </div>
             
             <!--<h3>Realização</h3>
@@ -437,10 +450,9 @@
                 <img class="logo-parceiro" src="assets/img/sbc_logo.png" alt="Logo SBC">
             </div>-->
             
-            <h3>Organização</h3>
+            <h3>Apoio</h3>
             <div class="grid-parceiros">
-                <img class="logo-parceiro" src="assets/img/ufsm_logo.png" alt="Logo UFSM">
-                <img class="logo-parceiro" src="assets/img/ctism_logo.png" alt="Logo CTISM">
+                <img class="logo-parceiro" src="https://i.pinimg.com/originals/e7/9b/ad/e79bad6d4cb3b0d8886da27bdc7147a0.png" alt="Logo UFRGS">
             </div>
         </section>
     </main>
