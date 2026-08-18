@@ -139,6 +139,43 @@
         .detalhes .local { font-weight: 600; color: #666; font-size: 0.85rem; display: block; margin-top: 2px; }
         .detalhes p { color: #555; font-size: 0.95rem; line-height: 1.4; }
         
+        /* Estilização para Bio dos Palestrantes */
+        .palestrante-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            background: #f8fafc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .palestrante-foto {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #04294f;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .palestrante-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .palestrante-nome {
+            font-weight: 700;
+            color: #04294f;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+        .palestrante-bio {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.45;
+        }
+
         .tipo-tag { 
             display: inline-block; 
             padding: 4px 10px; 
@@ -309,6 +346,11 @@
             .detalhes { padding: 15px 20px; }
             .banner h1 { font-size: 1.8rem; }
             
+            .palestrante-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .footer-container {
                 flex-direction: column;
                 gap: 40px;
@@ -417,6 +459,16 @@
                     <div class="detalhes">
                         <h3>Palestra - Cesar Loureiro</h3>
                         <span class="local">📍 Local: Auditório do CTISM</span>
+                        
+                        <!-- Box do Palestrante -->
+                        <div class="palestrante-box">
+                            <img src="assets/img/cesar_loureiro.jpg" alt="Foto de Cesar Loureiro" class="palestrante-foto">
+                            <div class="palestrante-info">
+                                <span class="palestrante-nome">Cesar Augusto Hass Loureiro</span>
+                                <p class="palestrante-bio">Mestre em Ciência da Computação pela UFRGS e professor do IFRS – Campus Porto Alegre[cite: 4]. Atua como colaborador do Ponto de Presença da RNP no Rio Grande do Sul e como coordenador técnico da MetroPOA[cite: 4]. Possui experiência em gerência, serviços e segurança de redes, com especial interesse e atuação em IPv6, além de ser coautor de livros na área de redes de computadores[cite: 4].</p>
+                            </div>
+                        </div>
+
                         <span class="tipo-tag tag-palestra">Palestra</span>
                     </div>
                 </div>
@@ -519,8 +571,17 @@
                         <h3>Palestra & Minicursos</h3>
                         <div class="sub-atividades">
                             <div class="sub-item">
-                                <strong>Palestra - Estefânia (RNP)</strong>
+                                <strong>Palestra - Estefânia Pianoski (RNP)</strong>
                                 <span class="local">📍 Local: Auditório CTISM</span>
+                                
+                                <!-- Box do Palestrante -->
+                                <div class="palestrante-box">
+                                    <img src="assets/img/estefania_pianoski.jpg" alt="Foto de Estefânia Pianoski" class="palestrante-foto">
+                                    <div class="palestrante-info">
+                                        <span class="palestrante-nome">Estefânia Pianoski</span>
+                                        <p class="palestrante-bio">Mestre em Engenharia da Informação pela UFABC, especialista em Gestão em Segurança da Informação e Coordenadora de P&D em Cibersegurança na RNP[cite: 5]. Possui sólida trajetória em Cibersegurança, Gestão de Identidade Digital, LGPD e governança[cite: 5]. É membro do Comitê Técnico Blockchain Brasil e do Comitê Técnico de Gestão de Identidade e Acesso[cite: 5].</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="sub-item"><strong>Minicurso 1 e Minicurso 2</strong></div>
                         </div>
@@ -582,7 +643,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2026 ERRC - Escola Regional de Redes de Computadores e Cybersegurança. Todos os direitos reservados.</p>
+            <p>© 2026 ERRC - Escola Regional de Redes de Computadores e Cibersegurança. Todos os direitos reservados.</p>
         </div>
     </footer>
 
