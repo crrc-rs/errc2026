@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERRC 2026 - Organização e Edições Anteriores</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-   
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
@@ -47,8 +47,7 @@
             align-items: center;
         }
 
-
- .linkedin-header-btn {
+        .linkedin-header-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -143,8 +142,34 @@
             justify-content: space-between;
         }
 
-        .membro-card h3 { color: #04294f; font-size: 1.2rem; margin-bottom: 5px; }
-        .membro-card .cargo { font-size: 0.9rem; font-weight: 700; color: #1a5c9e; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .membro-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .membro-foto {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #04294f;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .membro-card h3 { color: #04294f; font-size: 1.15rem; margin-bottom: 3px; }
+        .membro-card .cargo { font-size: 0.85rem; font-weight: 700; color: #1a5c9e; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .membro-bio {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.45;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
         .membro-card .lattes-btn {
             align-self: flex-start;
             text-decoration: none;
@@ -155,6 +180,7 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
+            margin-top: 5px;
         }
         .membro-card .lattes-btn:hover { color: #04294f; text-decoration: underline; }
 
@@ -327,6 +353,7 @@
             .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
             .item-padrao { flex-direction: column; align-items: flex-start; gap: 8px; }
             .instituicao-tag, .site-link { align-self: flex-start; }
+            .membro-header { flex-direction: column; align-items: flex-start; }
             
             .footer-container {
                 flex-direction: column;
@@ -383,7 +410,7 @@
         <div id="aba-comissao" class="tab-panel active">
             <section class="info-section">
                 <h2>Comissão Organizadora</h2>
-                <p>A comissão organizadora da 23ª Escola Regional de Redes de Computadores e Cybersegurança é composta pelos seguintes membros:</p>
+                <p>A comissão organizadora da 23ª Escola Regional de Redes de Computadores e Cibersegurança é composta pelos seguintes membros:</p>
                 
                 <div class="grid-comissao">
                     <div class="membro-card">
@@ -393,11 +420,16 @@
                         </div>
                         <a href="http://lattes.cnpq.br/7514884760338859" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
-
                     <div class="membro-card">
                         <div>
-                            <h3>Prof. Rafael Teodósio Pereira</h3>
-                            <div class="cargo">Coordenação do Comitê de Programa ERRC</div>
+                            <div class="membro-header">
+                                <img src="assets/img/rafael.jpg" alt="Foto de Prof. Rafael Teodósio Pereira" class="membro-foto">
+                                <div>
+                                    <h3>Prof. Rafael Teodósio Pereira</h3>
+                                    <div class="cargo">Coordenação do Comitê de Programa ERRC</div>
+                                </div>
+                            </div>
+                            <p class="membro-bio">Doutor e Mestre em Informática e Bioinformática pela Universidade do Minho (Portugal) e graduado em Ciência da Computação pela UFN. Atualmente é Professor Adjunto na Universidade Federal de Santa Maria (UFSM), atuando em Redes de Computadores, Sistemas de Gerenciamento de Infraestrutura de TI, Sistemas Operacionais e Bioinformática.</p>
                         </div>
                         <a href="http://lattes.cnpq.br/0447475597832377" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
@@ -436,15 +468,21 @@
                     
                     <div class="membro-card">
                         <div>
-                            <h3>Prof. Rogério Correa Turchetti</h3>
-                            <div class="cargo">Membro da Comissão</div>
+                            <div class="membro-header">
+                                <img src="assets/img/turchetti.jpg" alt="Foto de Prof. Rogério Correa Turchetti" class="membro-foto">
+                                <div>
+                                    <h3>Prof. Rogério Correa Turchetti</h3>
+                                    <div class="cargo">Membro da Comissão</div>
+                                </div>
+                            </div>
+                            <p class="membro-bio">Doutor em Informática (UFPR), Mestre em Engenharia de Produção (UFSM) e graduado em Sistemas de Informação (UFN). Professor Associado da UFSM e coordenador adjunto do PPGEPT. Possui experiência em Sistemas Distribuídos, tolerância a falhas, redes de computadores, redes definidas por software (SDN), NFV e Visão Computacional.</p>
                         </div>
                         <a href="http://lattes.cnpq.br/1286016553991455" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
                 </div><br>
 
                 <h2>Comitê Local de Apoio</h2>
-                <p>O comitê local de apoio da Escola Regional de Redes de Computadores e Cybersegurança constitui de bolsistas e voluntários, sendo eles:</p>
+                <p>O comitê local de apoio da Escola Regional de Redes de Computadores e Cibersegurança constitui de bolsistas e voluntários, sendo eles:</p>
                 
                 <div class="grid-comissao">
                     <div class="membro-card">
@@ -642,7 +680,7 @@
         <div id="aba-edicoes" class="tab-panel">
             <section class="info-section">
                 <h2>Edições Anteriores</h2>
-                <p>Histórico de sedes da Escola Regional de Redes de Computadores e Cybersegurança:</p>
+                <p>Histórico de sedes da Escola Regional de Redes de Computadores e Cibersegurança:</p>
                 
                 <div class="lista-padrao">
                     <div class="item-padrao">
@@ -766,7 +804,7 @@
         </div>
 
         <div class="footer-copyright">
-            <p>© 2026 ERRC - Escola Regional de Redes de Computadores e Cybersegurança. Todos os direitos reservados.</p>
+            <p>© 2026 ERRC - Escola Regional de Redes de Computadores e Cibersegurança. Todos os direitos reservados.</p>
         </div>
     </footer>
 
