@@ -144,7 +144,7 @@
 
         .membro-header {
             display: flex;
-            align-items: center;
+            align-items: center; 
             gap: 15px;
             margin-bottom: 12px;
         }
@@ -159,8 +159,21 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
-        .membro-card h3 { color: #04294f; font-size: 1.15rem; margin-bottom: 3px; }
-        .membro-card .cargo { font-size: 0.85rem; font-weight: 700; color: #1a5c9e; text-transform: uppercase; letter-spacing: 0.5px; }
+        .membro-card h3 { 
+            color: #04294f; 
+            font-size: 1.15rem; 
+            margin: 0 0 3px 0; 
+            line-height: 1.2;
+        }
+        
+        .membro-card .cargo { 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            color: #1a5c9e; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            line-height: 1.2;
+        }
         
         .membro-bio {
             font-size: 0.88rem;
@@ -353,7 +366,9 @@
             .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
             .item-padrao { flex-direction: column; align-items: flex-start; gap: 8px; }
             .instituicao-tag, .site-link { align-self: flex-start; }
-            .membro-header { flex-direction: column; align-items: flex-start; }
+            
+            /* Mantém a foto e o nome lado a lado mesmo em dispositivos móveis */
+            .membro-header { flex-direction: row; align-items: center; }
             
             .footer-container {
                 flex-direction: column;
@@ -420,6 +435,7 @@
                         </div>
                         <a href="http://lattes.cnpq.br/7514884760338859" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
+
                     <div class="membro-card">
                         <div>
                             <div class="membro-header">
@@ -429,7 +445,7 @@
                                     <div class="cargo">Coordenação do Comitê de Programa ERRC</div>
                                 </div>
                             </div>
-                            <p class="membro-bio">Doutor e Mestre em Informática e Bioinformática pela Universidade do Minho (Portugal) e graduado em Ciência da Computação pela UFN. Atualmente é Professor Adjunto na Universidade Federal de Santa Maria (UFSM), atuando em Redes de Computadores, Sistemas de Gerenciamento de Infraestrutura de TI, Sistemas Operacionais e Bioinformática.</p>
+                            <p class="membro-bio">Doutor e Mestre em Informática e Bioinformática pela Universidade do Minho (Portugal) e graduado em Ciência da Computação pela UFN[cite: 7]. Atualmente é Professor Adjunto na Universidade Federal de Santa Maria (UFSM), atuando em Redes de Computadores, Sistemas de Gerenciamento de Infraestrutura de TI, Sistemas Operacionais e Bioinformática[cite: 7].</p>
                         </div>
                         <a href="http://lattes.cnpq.br/0447475597832377" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
@@ -465,7 +481,6 @@
                         </div>
                         <a href="http://lattes.cnpq.br/7026969540049771" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
-                    
                     <div class="membro-card">
                         <div>
                             <div class="membro-header">
@@ -475,7 +490,7 @@
                                     <div class="cargo">Membro da Comissão</div>
                                 </div>
                             </div>
-                            <p class="membro-bio">Doutor em Informática (UFPR), Mestre em Engenharia de Produção (UFSM) e graduado em Sistemas de Informação (UFN). Professor Associado da UFSM e coordenador adjunto do PPGEPT. Possui experiência em Sistemas Distribuídos, tolerância a falhas, redes de computadores, redes definidas por software (SDN), NFV e Visão Computacional.</p>
+                            <p class="membro-bio">Doutor em Informática (UFPR), Mestre em Engenharia de Produção (UFSM) e graduado em Sistemas de Informação (UFN)[cite: 6]. Professor Associado da UFSM e coordenador adjunto do PPGEPT[cite: 6]. Possui experiência em Sistemas Distribuídos, tolerância a falhas, redes de computadores, redes definidas por software (SDN), NFV e Visão Computacional[cite: 6].</p>
                         </div>
                         <a href="http://lattes.cnpq.br/1286016553991455" target="_blank" class="lattes-btn">📄 Currículo Lattes</a>
                     </div>
