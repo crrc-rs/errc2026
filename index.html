@@ -177,6 +177,18 @@
             gap: 45px;
             margin-bottom: 20px;
         }
+        
+        .dupla-parceiros {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .coluna-parceiro {
+            flex: 1;
+            min-width: 250px;
+        }
+
         .logo-parceiro {
             height: 95px; 
             width: auto;
@@ -338,6 +350,7 @@
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
+            .dupla-parceiros { gap: 30px; }
             
             .footer-container {
                 flex-direction: column;
@@ -447,7 +460,7 @@
 
         <section class="secao-parceiros">
             <h2>Organização e Parceiros</h2>
-             <h3>Organização</h3>
+            <h3>Organização</h3>
             <div class="grid-parceiros">
                 <img class="logo-org" src="assets/img/ufsm_logo.png" alt="Logo UFSM">
                 <img class="logo-org" src="assets/img/ctism_logo.png" alt="Logo CTISM">
@@ -457,19 +470,35 @@
             <div class="grid-parceiros">
                 <img class="logo-re" src="assets/img/sbc_logov2.png" alt="Logo SBC">
             </div>
-            
-            <h3>Apoio</h3>
-            <div class="grid-parceiros">
+            <div class="coluna-parceiro">
+                    <h3>Apoio</h3>
+                    <div class="grid-parceiros">
+                        <img class="logo-parceiro" src="assets/img/unipampa.png" alt="Logo UNIPAMPA">
+                    </div>
+                </div>
+            <div class="dupla-parceiros">
+                <div class="coluna-parceiro">
+                    <h3>Apoio</h3>
+                    <div class="grid-parceiros">
+                        <img class="logo-parceiro" src="assets/img/unipampa.png" alt="Logo UNIPAMPA">
+                    </div>
+                </div>
+
+                <div class="coluna-parceiro">
+                    <h3>Patrocínio</h3>
+                    <div class="grid-parceiros">
+                        <!--<img class="logo-parceiro" src="assets/img/logo_patrocinador.png" alt="Logo Patrocinador">-->
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-coluna">
                 <h3>Realização</h3>
                 <img class="logo-footer-remoto" src="assets/img/sbc_logo.png" alt="Logo SBC">
-                </div>
+            </div>
 
             <div class="footer-coluna">
                 <h3>Organização</h3>
