@@ -293,36 +293,6 @@
             width: 100%;
         }
 
-        .secao-parceiros {
-            flex: 1;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .secao-parceiros.realizacao {
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .grid-parceiros {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 35px;
-        }
-        
-        .logo-parceiro {
-            max-height: 75px; 
-            width: auto;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .logo-parceiro:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
         @media (max-width: 992px) {
             header { padding: 1.5rem 5%; }
             main { padding: 30px 5%; }
@@ -360,10 +330,8 @@
             }
             .footer-coluna:not(:last-child) {
                 border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
-            .secao-parceiros.realizacao { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 40px; }
-            
-            .logo-parceiro { max-height: 60px; }
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+            }
         }
     </style>
 </head>
@@ -406,7 +374,6 @@
 
         <div class="cronograma-container">
 
-            <!-- Quarta-feira (21/10) -->
             <div id="quarta" class="dia-conteudo active">
                 <div class="item-cronograma">
                     <div class="horario">08:30 – 09:00</div>
@@ -451,7 +418,7 @@
                             <img src="assets/img/icon.png" alt="Foto de José Luiz" class="palestrante-foto">
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">José Luiz</span>
-                                <p class="palestrante-bio">...</p>
+                                <p class="palestrante-bio">Palestra de empresa parceira FORTE.</p>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -486,9 +453,20 @@
                 <div class="item-cronograma">
                     <div class="horario">15:00 – 16:00</div>
                     <div class="detalhes">
-                        <h3>(ERRC) Seção Técnica</h3>
-                        <p>Apresentação oral dos artigos científicos selecionados (Sala 1 e Sala 2).</p>
-                        <span class="tipo-tag tag-tecnica">Sessão Técnica</span>
+                        <h3>Atividades em Paralelo</h3>
+                        <div class="sub-atividades">
+                            <div class="sub-item">
+                                <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
+                                <span class="local">📍 Local: Sala 1 e Sala 2</span>
+                                <p>Apresentação oral dos artigos científicos selecionados.</p>
+                            </div>
+                            <div class="sub-item">
+                                <strong>Palestra de Empresa (Quaza Tecnologia) - Pedro</strong>
+                                <span class="local">📍 Local: Auditório CTISM</span>
+                                <p>Apresentação e palestra técnica com representante da Quaza Tecnologia.</p>
+                            </div>
+                        </div>
+                        <span class="tipo-tag tag-tecnica">Sessão Técnica / Palestra</span>
                     </div>
                 </div>
 
@@ -504,13 +482,13 @@
                 <div class="item-cronograma">
                     <div class="horario">16:30 – 17:30</div>
                     <div class="detalhes">
-                        <h3>Palestra - Alexandre Viera</h3>
+                        <h3>Palestra de Empresa - Alexandre Tim Viera</h3>
                         <span class="local">📍 Local: Auditório CTISM</span>
                         <div class="palestrante-box">
                             <img src="assets/img/icon.png" alt="Foto de Alexandre Viera" class="palestrante-foto">
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Alexandre Tim Viera</span>
-                                <p class="palestrante-bio">...</p>
+                                <p class="palestrante-bio">Palestra de empresa parceira.</p>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -536,10 +514,9 @@
                 </div>
             </div>
 
-            <!-- Quinta-feira (22/10) -->
             <div id="quinta" class="dia-conteudo">
                 <div class="item-cronograma">
-                    <div class="horario">14:00 – 15:00</div>
+                    <div class="horario">08:30 – 09:30</div>
                     <div class="detalhes">
                         <h3>Palestra - Juliana Vizzotto</h3>
                         <span class="local">📍 Local: Auditório SAB</span>
