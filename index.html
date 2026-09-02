@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERRC 2026 - 23ª Edição da Escola Regional de Redes de Computadores</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-   
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
@@ -98,6 +98,92 @@
         .banner a:hover { transform: translateY(-3px); background: #2e5fa7; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
 
         main { padding: 60px 10%; max-width: 1200px; margin: auto; }
+
+        /* Estilos do Mural de Novidades */
+        .mural-novidades {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-left: 6px solid #3a71c4;
+        }
+
+        .mural-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .mural-header h2 {
+            color: #04294f;
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .badge-novo {
+            background: #d97706;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-novidade {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .card-novidade h3 {
+            color: #1a5c9e;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-novidade p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #04294f;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: #3a71c4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(58, 113, 196, 0.3);
+        }
+
+        .btn-download svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
 
         .conteudo-principal {
             display: grid;
@@ -403,6 +489,26 @@
     </section>
 
     <main>
+        <!-- Mural de Novidades -->
+        <section class="mural-novidades">
+            <div class="mural-header">
+                <h2>Mural de Novidades</h2>
+                <span class="badge-novo">Novo</span>
+            </div>
+            <div class="card-novidade">
+                <h3>Chamada Pública para Submissão de Propostas de Minicursos</h3>
+                <p>
+                    Estão abertas as submissões para propostas de minicursos para a ERRC 2026! Convidamos estudantes, pesquisadores, professores e profissionais da área a submeterem propostas de minicursos teóricos, práticos ou oficinas abordando temas em Redes de Computadores, Cibersegurança e áreas correlatas. O prazo final para submissão é até <strong>15 de setembro de 2026 às 23:59</strong>.
+                </p>
+                <a href="assets/docs/Edital_Minicursos_ERRC_2026.pdf" target="_blank" class="btn-download">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Baixar Edital de Minicursos (PDF)
+                </a>
+            </div>
+        </section>
+
         <div class="conteudo-principal">
             <section class="apresentacao">
                 <h2>Apresentação</h2>
