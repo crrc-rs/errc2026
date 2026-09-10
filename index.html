@@ -99,7 +99,6 @@
 
         main { padding: 60px 10%; max-width: 1200px; margin: auto; }
 
-        /* Estilos do Mural de Novidades */
         .mural-novidades {
             background: #ffffff;
             border-radius: 12px;
@@ -288,6 +287,18 @@
             transition: 0.3s;
         }
         .logo-parceiro:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        .logo-prata {
+            height: 115px; 
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+        .logo-prata:hover {
             filter: grayscale(0%);
             opacity: 1;
         }
@@ -632,7 +643,7 @@
                     <h3>Patrocínio</h3>
                     <div class="grid-parceiros">
                         <img class="logo-master" src="assets/img/forte.png" alt="Logo Forte - Patrocinador Master">
-                        <!-- Futuros patrocinadores (usar class="logo-parceiro" para tamanho padrão) -->
+                        <img class="logo-prata" src="cancian.png" alt="Logo Cancian - Patrocinador Prata">
                     </div>
                 </div>
             </div>
