@@ -292,6 +292,18 @@
             opacity: 1;
         }
         
+        .logo-master {
+            height: 140px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.85;
+            transition: 0.3s;
+        }
+        .logo-master:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
         .logo-org {
             height: 190px; 
             width: auto;
@@ -619,7 +631,8 @@
                 <div class="coluna-parceiro">
                     <h3>Patrocínio</h3>
                     <div class="grid-parceiros">
-                        <!--<img class="logo-parceiro" src="assets/img/logo_patrocinador.png" alt="Logo Patrocinador">-->
+                        <img class="logo-master" src="assets/img/forte.png" alt="Logo Forte - Patrocinador Master">
+                        <!-- Futuros patrocinadores (usar class="logo-parceiro" para tamanho padrão) -->
                     </div>
                 </div>
             </div>
