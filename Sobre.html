@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERRC 2026 - Sobre a Escola Regional de Redes de Computadores</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-   
+    
     <style>
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
         html { scroll-behavior: smooth; }
@@ -35,8 +34,8 @@
             padding: 5px 0;
             transition: transform 0.3s ease;
         }
-       .logo img:hover { transform: scale(1.03); }
-       
+        .logo img:hover { transform: scale(1.03); }
+        
         .nav-container {
             display: flex;
             align-items: center;
@@ -98,7 +97,7 @@
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 30px; 
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
         .card { 
             padding: 30px; 
@@ -281,26 +280,6 @@
             width: 100%;
         }
 
-        .grid-parceiros {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 45px;
-        }
-        
-        .logo-parceiro {
-            max-height: 95px; 
-            width: auto;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .logo-parceiro:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
         @media (max-width: 900px) {
             header { padding: 1.5rem 5%; }
             main { padding: 40px 5%; }
@@ -319,13 +298,7 @@
             .linkedin-header-btn { margin-left: 0; }
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
-            .grid-parceiros { gap: 25px; }
-            .logo-parceiro { max-height: 65px; }
             
-            .footer-parceiros {
-                flex-direction: column;
-                gap: 40px;
-            }
             .footer-container {
                 flex-direction: column;
                 gap: 40px;
@@ -401,6 +374,43 @@
 
         <section class="secao-sobre">
             <h2>Sede de 2026: Santa Maria, RS</h2>
+            <p>
+                Conhecida como o <strong>"Coração do Rio Grande"</strong> por sua localização estratégica no centro do Rio Grande do Sul, Santa Maria guarda uma trajetória marcada pelo pioneirismo no ensino, pela tradição militar e por marcos históricos que moldaram o desenvolvimento da Região Sul do país.
+            </p>
+
+            <div class="grid-topics">
+                <div class="card">
+                    <h3>Era Ferroviária & A Gare</h3>
+                    <p>A partir do final do século XIX, a expansão das ferrovias transformou Santa Maria no maior entroncamento ferroviário do estado. A histórica Gare da Viação Férrea tornou-se o ponto central de integração de passageiros e cargas, impulsionando a urbanização e o crescimento econômico da região.</p>
+                </div>
+                <div class="card">
+                    <h3>Vila Belga</h3>
+                    <p>Projetada pelo engenheiro belga Gustave Vauthier entre 1901 e 1903 para abrigar os trabalhadores da companhia ferroviária, a Vila Belga foi o primeiro conjunto habitacional planejado do Rio Grande do Sul. Suas residências em estilo europeu permanecem preservadas como patrimônio histórico e cultural.</p>
+                </div>
+                <div class="card">
+                    <h3>Berço da Paleontologia</h3>
+                    <p>A região está situada sobre formações rochosas do Período Triássico (com cerca de 230 milhões de anos). Santa Maria abriga alguns dos fósseis de dinossauros e répteis pré-históricos mais antigos do planeta, sendo reconhecida internacionalmente como um dos berços da paleontologia mundial.</p>
+                </div>
+                <div class="card">
+                    <h3>Tradição Militar</h3>
+                    <p>Sua posição geográfica no centro gaúcho consolidou a cidade como o segundo maior contingente militar do Brasil. Santa Maria carrega o título de "Capital do Blindado", abrigando importantes unidades das Forças Armadas e centros de tecnologia aplicados à defesa nacional.</p>
+                </div>
+            </div>
+
+            <section class="secao-sobre">
+                <h2>Localização da ERRC 2026: UFSM</h2>
+        
+            <div class="bloco-info">
+                <div class="bloco-info-texto">
+                    <h3>A Universidade Federal de Santa Maria</h3>
+                    <p>Fundada em 1960 pelo Professor José Mariano da Rocha Filho, a UFSM tem um significado histórico pioneiro: foi a primeira universidade federal criada no interior do Brasil, descentralizando o acesso ao ensino superior público e de excelência.</p>
+                    <p>Seu campus sede, localizado no bairro Camobi, estrutura-se como uma verdadeira "cidade universitária", unindo modernos laboratórios de pesquisa em computação e engenharia a uma vasta e acolhedora área arborizada, ideal para a integração de estudantes e pesquisadores.</p>
+                </div>
+                <div class="bloco-info-imagem">
+                    <img src="https://www.ufsm.br/app/uploads/sites/906/2023/11/Arco-de-Acesso-a-UFSM-II-Carolina-Lemos.jpg" alt="Campus da UFSM">
+                    <p class="legenda-imagem">O famoso arco da UFSM, guiando o caminho para o conhecimento.</p>
+                </div>
+            </div>
 
             <div class="bloco-info invertido" style="direction: rtl;">
                 <div class="bloco-info-texto" style="direction: ltr;">
@@ -411,18 +421,6 @@
                 <div class="bloco-info-imagem" style="direction: ltr;">
                     <img src="https://sbseg2022.inf.ufsm.br/images/pictures/ctism.jpg" alt="Prédio do CTISM">
                     <p class="legenda-imagem">Prédio do Curso Superior Tecnólogo em Redes de Computadores do CTISM, aliando tradição de ensino técnico a metodologias inovadoras.</p>
-                </div>
-            </div>
-            
-            <div class="bloco-info">
-                <div class="bloco-info-texto">
-                    <h3>A Universidade Federal de Santa Maria</h3>
-                    <p>Fundada em 1960 pelo Professor José Mariano da Rocha Filho, a UFSM tem um significado histórico pioneiro: foi a primeira universidade federal criada no interior do Brasil, descentralizando o acesso ao ensino superior público e de excelência.</p>
-                    <p>Seu campus sede, localizado no bairro Camobi, estrutura-se como uma verdadeira "cidade universitária", unindo modernos laboratórios de pesquisa em computação e engenharia a uma vasta e acolhedora área arborizada, ideal para a integração de estudantes e pesquisadores.</p>
-                </div>
-                <div class="bloco-info-imagem">
-                    <img src="https://www.ufsm.br/app/uploads/sites/906/2023/11/Arco-de-Acesso-a-UFSM-II-Carolina-Lemos.jpg" alt="Campus da UFSM">
-                    <p class="legenda-imagem">O famoso arco da UFSM, guiando o caminho para o conhecimento.</p>
                 </div>
             </div>
 
@@ -446,7 +444,7 @@
             <div class="footer-coluna">
                 <h3>Realização</h3>
                 <img class="logo-footer-remoto" src="assets/img/logo_sbc.png" alt="Logo SBC">
-                </div>
+            </div>
 
             <div class="footer-coluna">
                 <h3>Organização</h3>
@@ -458,7 +456,7 @@
 
             <div class="footer-coluna">
                 <h3>Contato</h3>
-                  <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
+                <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
                 <a href="mailto:errc2026@redes.ufsm.br">errc2026@redes.ufsm.br</a>
                 <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
                     <svg viewBox="0 0 24 24">
