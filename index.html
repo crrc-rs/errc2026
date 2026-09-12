@@ -257,26 +257,15 @@
             color: #555;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 25px 0 15px 0;
+            margin: 30px 0 15px 0;
         }
         .grid-parceiros {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 45px;
-            margin-bottom: 20px;
-        }
-        
-        .dupla-parceiros {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-        .coluna-parceiro {
-            flex: 1;
-            min-width: 250px;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
         .logo-parceiro {
@@ -291,30 +280,43 @@
             opacity: 1;
         }
 
-        .logo-prata {
-            height: 110px; 
+        /* Dimensoes das Categorias de Patrocinio */
+        .logo-diamante {
+            height: 150px;
             width: auto;
             filter: grayscale(100%);
-            opacity: 0.8;
+            opacity: 0.9;
             transition: 0.3s;
         }
-        .logo-prata:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-        
-        .logo-master {
-            height: 140px;
+        .logo-diamante:hover { filter: grayscale(0%); opacity: 1; }
+
+        .logo-ouro {
+            height: 125px;
             width: auto;
             filter: grayscale(100%);
             opacity: 0.85;
             transition: 0.3s;
         }
-        .logo-master:hover {
-            filter: grayscale(0%);
-            opacity: 1;
+        .logo-ouro:hover { filter: grayscale(0%); opacity: 1; }
+
+        .logo-prata {
+            height: 100px; 
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: 0.3s;
         }
-        
+        .logo-prata:hover { filter: grayscale(0%); opacity: 1; }
+
+        .logo-bronze {
+            height: 80px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.75;
+            transition: 0.3s;
+        }
+        .logo-bronze:hover { filter: grayscale(0%); opacity: 1; }
+
         .logo-org {
             height: 190px; 
             width: auto;
@@ -337,6 +339,7 @@
             filter: grayscale(0%);
             opacity: 1;
         }
+
         footer { 
             padding: 50px 10% 30px 10%; 
             background: #04294f; 
@@ -464,7 +467,6 @@
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             .grid-parceiros { gap: 25px; }
-            .dupla-parceiros { gap: 30px; }
             
             .footer-container {
                 flex-direction: column;
@@ -549,7 +551,7 @@
                     * Para mais informações, acesse a aba Inscrições no menu de opções da página ou por este <a href="Inscricoes.html">link</a>.
                 </p>
             </div>
-            <!-- Chamada Pública para Minicursos (Link corrigido para o PDF) -->
+            <!-- Chamada Pública para Minicursos -->
             <div class="card-novidade">
                 <h3>Chamada Pública para Submissão de Propostas de Minicursos</h3>
                 <p>
@@ -631,20 +633,16 @@
             <div class="grid-parceiros">
                 <img class="logo-re" src="assets/img/logo_sbc.png" alt="Logo SBC">
             </div>
-            <div class="dupla-parceiros">
-                <div class="coluna-parceiro">
-                    <h3>Apoio</h3>
-                    <div class="grid-parceiros">
-                        <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
-                    </div>
-                </div>
-                <div class="coluna-parceiro">
-                    <h3>Patrocínio</h3>
-                    <div class="grid-parceiros">
-                        <img class="logo-master" src="assets/img/forte.png" alt="Logo Forte - Patrocinador Master">
-                        <img class="logo-prata" src="assets/img/cancian_logo.png" alt="Logo Cancian - Patrocinador Prata">
-                    </div>
-                </div>
+            
+            <h3>Apoio</h3>
+            <div class="grid-parceiros">
+                <img class="logo-parceiro" src="assets/img/unipampa_logo.png" alt="Logo UNIPAMPA">
+            </div>
+            
+            <h2>Patrocínio</h2>
+            <div class="grid-parceiros">
+                <img class="logo-diamante" src="assets/img/forte.png" alt="Logo Forte">
+                <img class="logo-prata" src="assets/img/cancian_logo.png" alt="Logo Cancian">
             </div>
         </section>
     </main>
