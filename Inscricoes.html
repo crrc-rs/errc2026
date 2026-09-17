@@ -39,12 +39,13 @@
             transform: scale(1.03);
         }
 
-        nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
-        nav a:hover { background: #3a71c4; }
         .nav-container {
             display: flex;
             align-items: center;
         }
+
+        nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
+        nav a:hover { background: #3a71c4; }
 
         .linkedin-header-btn {
             display: inline-flex;
@@ -68,6 +69,30 @@
             width: 16px;
             height: 16px;
             fill: currentColor;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 20;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff !important;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
         }
 
         .banner { 
@@ -285,17 +310,65 @@
             opacity: 0.6;
             width: 100%;
         }
+
         @media (max-width: 992px) {
-            header { padding: 1.5rem 5%; }
+            header { padding: 1rem 5%; }
             main { padding: 30px 5%; }
         }
+
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 1.5rem 20px; }
-            .logo { margin-bottom: 15px; }
-            .logo img { max-height: 90px; } 
-            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
-            nav a { margin-left: 0; font-size: 0.9rem; padding: 5px 8px; }
-            .linkedin-header-btn { margin-left: 0; }
+            header { 
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center; 
+                padding: 1rem 20px; 
+            }
+            .logo { margin-bottom: 0; }
+            .logo img { max-height: 70px; } 
+            
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-container {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #04294f;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            nav { 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 15px; 
+                width: 100%;
+            }
+
+            nav a { 
+                margin-left: 0; 
+                font-size: 1.1rem; 
+                padding: 10px 20px; 
+                width: 100%;
+                text-align: center;
+            }
+
+            .linkedin-header-btn { 
+                margin-left: 0; 
+                margin-top: 10px;
+            }
+            
             .topics-list { column-count: 1; }
             .btn-action { width: 100%; margin-right: 0; margin-bottom: 10px; }
             .banner h1 { font-size: 1.8rem; }
@@ -323,7 +396,14 @@
                 <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
             </a>
         </div>
-        <div class="nav-container">
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-container" id="navContainer">
             <nav aria-label="Menu Principal">
                 <a href="Sobre.html">Sobre</a>
                 <a href="Localizacao.html">Localização</a>
@@ -340,6 +420,7 @@
             </a>
         </div>
     </header>
+
     <section class="banner">
         <h1>Inscreva-se para a ERRC!</h1>
         <p>Participe do evento fazendo sua inscrição e aproveitando diversas atividades.</p>
@@ -356,6 +437,7 @@
                 *Autores de trabalhos aceitos devem realizar a inscrição para garantir a publicação nos anais.
             </p>
         </section>
+
         <section class="section-box">
             <h2>Informações Gerais de Inscrição</h2>
             
@@ -372,6 +454,7 @@
                 <h3 style="color: #04294f; font-size: 1.1rem; margin-bottom: 10px;">Prazos e Métodos de Pagamento</h3>
                 <ul style="padding-left: 20px; color: #555; line-height: 1.8;">
                     <li>Os pagamentos por <b>boleto e débito</b> encerram-se dia <b>19/10/2026</b>. Outras formas de pagamento <b>(Cartão de Crédito, PIX, Nota de Empenho e Faturamento)</b> ficarão abertos <b>até o último dia do evento</b>.</li>
+                </ul>
             </div>
 
             <div style="margin-bottom: 15px;">
@@ -383,6 +466,7 @@
                 * A taxa de inscrição dá direito à participação nas sessões da ERRC, palestras, minicursos e ao certificado digital de participação.
             </p>
         </section>
+
         <section class="section-box">
             <h2>Valores de Inscrição</h2>
             <p>Confira a tabela de valores por categoria e prazos de inscrição:</p>
@@ -430,7 +514,8 @@
                         <!-- Estudante de Pós-Graduação -->
                         <tr class="category-header">
                             <td colspan="4">Estudantes de Pós-Graduação</td>
-                        </tr><tr>
+                        </tr>
+                        <tr>
                             <td>Estudante de pós-graduação associado à SBC com anuidade vigente <span class="badge-sbc">Desconto Sócio</span></td>
                             <td>R$ 45,00</td>
                             <td>R$ 55,00</td>
@@ -550,7 +635,7 @@
             </p>
         </section>
     
-            <section class="step-container">
+        <section class="step-container">
             <h2>Como se inscrever?</h2>
             <ul class="step-list">
                 <li>Acesse o portal <strong>SBC ECOS</strong> através do botão abaixo.</li>
@@ -614,5 +699,14 @@
             <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.getElementById('navContainer');
+
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
