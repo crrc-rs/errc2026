@@ -389,9 +389,23 @@
             }
             .logo { margin-bottom: 0; }
             .logo img { max-height: 70px; } 
-            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
-            nav a { margin-left: 0; font-size: 0.9rem; padding: 5px 8px; }
-            .linkedin-header-btn { margin-left: 0; }
+            nav { display: flex; 
+                flex-direction: column; 
+                width: 100%; 
+                align-items: center; 
+                gap: 5px;}
+            
+            nav a { margin-left: 0; 
+                    font-size: 1rem; 
+                    padding: 10px 0; 
+                    width: 80%; 
+                    text-align: center; 
+                    display: block; 
+                    }
+            .linkedin-header-btn  { margin-left: 0; 
+                                    margin-top: 10px; 
+                                    justify-content: center; 
+                                  }
             .banner h1 { font-size: 1.8rem; }
             .tabs-nav { justify-content: center; }
             .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
