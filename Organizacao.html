@@ -70,6 +70,31 @@
             height: 16px;
             fill: currentColor;
         }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 20;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff !important;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+        
         .banner { 
             text-align: center; 
             padding: 60px 20px; 
@@ -1005,6 +1030,15 @@
 
             document.getElementById(idAba).classList.add('active');
             evento.currentTarget.classList.add('active');
+        }
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.getElementById('navContainer');
+
+        if (menuToggle && navContainer) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navContainer.classList.toggle('active');
+            });
         }
     </script>
 
