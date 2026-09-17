@@ -66,6 +66,31 @@
         }
         nav a { color: white; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; padding: 5px 10px; border-radius: 4px;}
         nav a:hover { background: #3a71c4; }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 20;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff !important;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+
         .banner { 
             text-align: center; 
             padding: 60px 20px; 
@@ -281,7 +306,7 @@
         }
 
         @media (max-width: 900px) {
-            header { padding: 1.5rem 5%; }
+            header { padding: 1rem 5%; }
             main { padding: 40px 5%; }
             .bloco-info { grid-template-columns: 1fr !important; gap: 25px; }
             .bloco-info.invertido .bloco-info-imagem { grid-row: 1; }
@@ -290,12 +315,58 @@
         }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; padding: 1.5rem 20px; }
-            .logo { margin-bottom: 15px; }
-            .logo img { max-height: 90px; }
-            nav { display: flex; flex-wrap: wrap; justify-content: center; }
-            nav a { margin: 5px; font-size: 0.9rem; }
-            .linkedin-header-btn { margin-left: 0; }
+            header { 
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center; 
+                padding: 1rem 20px; 
+            }
+            .logo { margin-bottom: 0; }
+            .logo img { max-height: 70px; } 
+            
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-container {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #04294f;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+
+            nav { 
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+                gap: 15px; 
+                width: 100%;
+            }
+
+            nav a { 
+                margin-left: 0; 
+                font-size: 1.1rem; 
+                padding: 10px 20px; 
+                width: 100%;
+                text-align: center;
+            }
+
+            .linkedin-header-btn { 
+                margin-left: 0; 
+                margin-top: 10px;
+            }
+
             .banner h1 { font-size: 2.2rem; }
             .banner p { font-size: 1rem; }
             
@@ -322,7 +393,14 @@
                 <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
             </a>
         </div>
-        <div class="nav-container">
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-container" id="navContainer">
             <nav aria-label="Menu Principal">
                 <a href="Sobre.html" style="background: #3a71c4;">Sobre</a>
                 <a href="Localizacao.html">Localização</a>
@@ -470,5 +548,14 @@
             <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.getElementById('navContainer');
+
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
