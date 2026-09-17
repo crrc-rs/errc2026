@@ -391,9 +391,29 @@
             .tab-btn { padding: 10px 15px; font-size: 0.9rem; }
             .item-padrao { flex-direction: column; align-items: flex-start; gap: 8px; }
             .instituicao-tag, .site-link { align-self: flex-start; }
+            
             .menu-toggle {
                 display: flex;
             }
+
+            .nav-container {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #04294f;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-container.active {
+                display: flex;
+            }
+            
             .membro-header { flex-direction: row; align-items: center; }
             
             .footer-container {
