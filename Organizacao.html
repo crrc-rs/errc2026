@@ -95,7 +95,19 @@
             transition: all 0.3s ease;
             box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
         }
-        
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+  
         .banner { 
             text-align: center; 
             padding: 60px 20px; 
@@ -1066,20 +1078,22 @@
     </footer>
 
     <script>
-        function alterarAba(evento, idAba) {
-            const paineis = document.querySelectorAll('.tab-panel');
-            paineis.forEach(painel => {
-                painel.classList.remove('active');
-            });
+    function alterarAba(evento, idAba) {
+        const paineis = document.querySelectorAll('.tab-panel');
+        paineis.forEach(painel => {
+            painel.classList.remove('active');
+        });
 
-            const botoes = document.querySelectorAll('.tab-btn');
-            botoes.forEach(botao => {
-                botao.classList.remove('active');
-            });
+        const botoes = document.querySelectorAll('.tab-btn');
+        botoes.forEach(botao => {
+            botao.classList.remove('active');
+        });
 
-            document.getElementById(idAba).classList.add('active');
-            evento.currentTarget.classList.add('active');
-        }
+        document.getElementById(idAba).classList.add('active');
+        evento.currentTarget.classList.add('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menuToggle');
         const navContainer = document.getElementById('navContainer');
 
@@ -1089,7 +1103,9 @@
                 navContainer.classList.toggle('active');
             });
         }
-    </script>
+    });
+</script>
+
 
 </body>
 </html>
