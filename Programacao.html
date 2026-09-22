@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERRC 2026 - Programação Prevista para o Evento</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
@@ -22,7 +22,7 @@
             position: relative;
             z-index: 10;
         }
-        
+
         .logo a {
             display: flex;
             align-items: center;
@@ -35,7 +35,7 @@
             padding: 5px 0;
             transition: transform 0.3s ease;
         }
-        
+
         .logo img:hover {
             transform: scale(1.03);
         }
@@ -105,7 +105,7 @@
         .banner h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
         main { padding: 40px 10%; max-width: 1200px; margin: auto; }
-        
+
         .dia-seletor { 
             display: flex; 
             justify-content: center; 
@@ -143,7 +143,7 @@
         }
         .item-cronograma:last-child { border-bottom: none; }
         .item-cronograma:hover { background-color: #f9fbfd; }
-        
+
         .horario { 
             background: #f0f4f8; 
             padding: 20px; 
@@ -162,7 +162,7 @@
         .detalhes .sub-item { padding-left: 15px; border-left: 3px solid #3a71c4; }
         .detalhes .local { font-weight: 600; color: #666; font-size: 0.85rem; display: block; margin-top: 2px; }
         .detalhes p { color: #555; font-size: 0.95rem; line-height: 1.4; }
-        
+
         .palestrante-box {
             display: flex;
             align-items: flex-start;
@@ -186,6 +186,7 @@
         .palestrante-info {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
         }
         .palestrante-nome {
             font-weight: 700;
@@ -197,6 +198,123 @@
             font-size: 0.85rem;
             color: #444;
             line-height: 1.45;
+            margin-bottom: 8px;
+        }
+        
+        .btn-sinopse {
+            background: #1a5c9e;
+            color: #ffffff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-sinopse:hover {
+            background: #04294f;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 41, 79, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            background: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            color: #04294f;
+        }
+        .modal-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        .modal-content h3 {
+            color: #04294f;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+        .modal-palestrante {
+            font-weight: 600;
+            color: #1a5c9e;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .modal-divider {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 15px 0;
+        }
+        .modal-sinopse-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .modal-sinopse-texto {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .tipo-tag { 
@@ -220,7 +338,7 @@
             margin-top: 60px; 
             font-size: 0.9rem;
         }
-        
+
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -242,7 +360,7 @@
         .footer-coluna:not(:last-child) {
             border-right: 1px solid rgba(255, 255, 255, 0.15);
         }
-        
+
         footer h3 {
             font-size: 0.95rem;
             color: #3a71c4;
@@ -284,7 +402,7 @@
             opacity: 0.8;
             transition: 0.3s;
         }
-        
+
         .logo-footer-remoto:hover {
             opacity: 1;
         }
@@ -397,7 +515,7 @@
             }
             .detalhes { padding: 15px 20px; }
             .banner h1 { font-size: 1.8rem; }
-            
+
             .palestrante-box {
                 flex-direction: column;
                 align-items: flex-start;
@@ -464,7 +582,6 @@
 
         <div class="cronograma-container">
 
-            <!-- Quarta-feira (21/10) -->
             <div id="quarta" class="dia-conteudo active">
                 <div class="item-cronograma">
                     <div class="horario">08:30 – 09:00</div>
@@ -474,7 +591,7 @@
                         <span class="tipo-tag tag-social">Social</span>
                     </div>
                 </div>
-                
+
                 <div class="item-cronograma">
                     <div class="horario">09:00 – 10:00</div>
                     <div class="detalhes">
@@ -485,6 +602,12 @@
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Eder John Scheid</span>
                                 <p class="palestrante-bio">Professor na UFRGS e PhD pela Universidade de Zurique com foco em blockchains, Eder pesquisa contratos inteligentes, sistemas distribuídos e segurança cibernética, acumulando liderança e participação em diversos projetos internacionais de aplicação da tecnologia.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="Eder John Scheid" 
+                                        data-titulo="Medindo a Internet: Procurando Descentralização, Encontrando Dependências"
+                                        data-sinopse="A Internet nasceu com a premissa de ser aberta, distribuída, resiliente e sem um controle global sobre seu desenvolvimento. Essas características contribuíram para sua ampla adoção e consolidação como uma infraestrutura essencial à sociedade. Entretanto, sua evolução revela um paradoxo: enquanto sua arquitetura permite diferentes formas de descentralização, serviços e infraestruturas essenciais estão cada vez mais concentrados nas mãos de poucos atores. Nesse contexto, emergem questões relacionadas à privacidade, à autonomia e à soberania digital. Nesta palestra, serão apresentados resultados de pesquisas que investigam a centralização da Internet a partir de dois componentes fundamentais de sua infraestrutura: o DNS e o ecossistema de emissão de certificados SSL/TLS. Por meio de medições e análises, serão discutidos os níveis de concentração e as dependências existentes nesses ecossistemas, bem como suas implicações para a privacidade e a soberania digital.">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -508,8 +631,14 @@
                         <div class="palestrante-box">
                             <img src="assets/img/jose_luiz.png" alt="Foto de José Luiz" class="palestrante-foto">
                             <div class="palestrante-info">
-                                <span class="palestrante-nome">Em definição...</span>
-                                <p class="palestrante-bio">...</p>
+                                <span class="palestrante-nome">José Luiz</span>
+                                <p class="palestrante-bio">Representante e palestrante convidado da empresa FORTE.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="José Luiz (FORTE)" 
+                                         data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -535,6 +664,12 @@
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Cesar Augusto Hass Loureiro</span>
                                 <p class="palestrante-bio">Mestre em Ciência da Computação pela UFRGS e professor do IFRS – Campus Porto Alegre. Atua como colaborador do Ponto de Presença da RNP no Rio Grande do Sul e como coordenador técnico da MetroPOA. Possui experiência em gerência, serviços e segurança de redes, com especial interesse e atuação em IPv6, além de ser coautor de livros na área de redes de computadores.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="Cesar Augusto Hass Loureiro" 
+                                         data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -559,6 +694,12 @@
                                     <div class="palestrante-info">
                                         <span class="palestrante-nome">Pedro Wessel</span>
                                         <p class="palestrante-bio">Graduado em Redes de Computadores pela UFSM, pesquisador com trabalhos apresentados no Reino Unido e empreendedor no setor de tecnologia, atuando como fundador da Quaza Tecnologia (ERP para provedores na América Latina), criador da Rocket Tecnologia e responsável técnico registrado no CREA por sete provedores de internet.</p>
+                                        <button class="btn-sinopse" 
+                                                data-palestrante="Pedro Wessel" 
+                                                 data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -586,6 +727,12 @@
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Alexandre Timm Vieira</span>
                                 <p class="palestrante-bio">Gerente Executivo de Segurança de TI no Banrisul e professor universitário com 22 anos de experiência, é Mestre em Engenharia Elétrica pela PUCRS e possui certificações na área, atuando com foco em Segurança da Informação, Infraestrutura de TI e Redes de Computadores.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="Alexandre Timm Vieira" 
+                                         data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -611,7 +758,6 @@
                 </div>
             </div>
 
-            <!-- Quinta-feira (22/10) -->
             <div id="quinta" class="dia-conteudo">
                 <div class="item-cronograma">
                     <div class="horario">08:30 – 09:30</div>
@@ -623,6 +769,12 @@
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Juliana Kaizer Vizzotto</span>
                                 <p class="palestrante-bio">Doutora e Mestra em Ciência da Computação pela UFRGS (com período na Indiana University) e Bacharel pela UCPel, a docente atua no DLSC/UFSM e é especialista em Computação Quântica, Teoria da Computação e Semântica Formal. Premiada no Concurso de Teses da SBC, é coordenadora de Tecnologia do MACT/UFSM e atua na área transdisciplinar de Arte, Ciência e Computação.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="Juliana Kaizer Vizzotto" 
+                                         data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -677,6 +829,12 @@
                             <div class="palestrante-info">
                                 <span class="palestrante-nome">Estefânia Pianoski</span>
                                 <p class="palestrante-bio">Mestre em Engenharia da Informação pela UFABC, especialista em Gestão em Segurança da Informação e Coordenadora de P&D em Cibersegurança na RNP. Possui sólida trajetória em Cibersegurança, Gestão de Identidade Digital, LGPD e governança. É membro do Comitê Técnico Blockchain Brasil e do Comitê Técnico de Gestão de Identidade e Acesso.</p>
+                                <button class="btn-sinopse" 
+                                        data-palestrante="Estefânia Pianoski" 
+                                        data-titulo="Em definição..."
+                                        data-sinopse="...">
+                                    Ver Detalhes da Palestra
+                                </button>
                             </div>
                         </div>
                         <span class="tipo-tag tag-palestra">Palestra</span>
@@ -714,6 +872,18 @@
         </div>
     </main>
 
+    <div id="modalPalestra" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+            <span class="modal-tag">Detalhes da Palestra</span>
+            <h3 id="modalTitulo">Título da Palestra</h3>
+            <p class="modal-palestrante" id="modalPalestrante">Palestrante: Nome</p>
+            <hr class="modal-divider">
+            <div class="modal-sinopse-label">Sinopse</div>
+            <p class="modal-sinopse-texto" id="modalSinopse">Texto da sinopse...</p>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-coluna">
@@ -748,6 +918,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
 
+            // Menu Mobile Toggle
             const menuToggle = document.getElementById('menuToggle');
             const navContainer = document.getElementById('navContainer');
 
@@ -758,6 +929,7 @@
                 });
             }
 
+            // Seleção de Dias (Quarta / Quinta)
             const botoes = document.querySelectorAll('.dia-btn');
             const conteudos = document.querySelectorAll('.dia-conteudo');
 
@@ -777,6 +949,53 @@
                     });
                 });
             });
+
+            // Lógica do Pop-up (Modal) para Título e Sinopse
+            const modal = document.getElementById('modalPalestra');
+            const modalClose = document.getElementById('modalClose');
+            const modalTitulo = document.getElementById('modalTitulo');
+            const modalPalestrante = document.getElementById('modalPalestrante');
+            const modalSinopse = document.getElementById('modalSinopse');
+
+            const btnsSinopse = document.querySelectorAll('.btn-sinopse');
+
+            btnsSinopse.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const palestrante = btn.getAttribute('data-palestrante');
+                    const titulo = btn.getAttribute('data-titulo');
+                    const sinopse = btn.getAttribute('data-sinopse');
+
+                    if (modalPalestrante) modalPalestrante.textContent = 'Palestrante: ' + palestrante;
+                    if (modalTitulo) modalTitulo.textContent = titulo;
+                    if (modalSinopse) modalSinopse.textContent = sinopse;
+
+                    if (modal) modal.classList.add('active');
+                });
+            });
+
+            // Fechar modal ao clicar no botão X
+            if (modalClose) {
+                modalClose.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+            }
+
+            // Fechar modal ao clicar fora da caixa branca
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                    }
+                });
+            }
+
+            // Fechar modal ao pressionar a tecla ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                }
+            });
+
         });
     </script>
 </body>
