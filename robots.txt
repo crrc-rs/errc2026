@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crrc-rs.github.io/errc2026/sitemap.xml
