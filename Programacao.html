@@ -537,465 +537,470 @@
     </style>
 </head>
 <body>
-
-   <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
-            </a>
-        </div>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <div class="nav-container" id="navContainer">
-            <nav aria-label="Menu Principal">
-                <a href="Sobre.html">Sobre</a>
-                <a href="Localizacao.html">Localização</a>
-                <a href="Programacao.html" style="background: #3a71c4;">Programação</a>
-                <a href="Inscricoes.html">Inscrições</a>
-                <a href="Chamada.html">Chamada p/ Trabalhos</a>
-                <a href="Organizacao.html">Organização</a>
-            </nav>
-            <a href="https://linkedin.com/company/escoladeredes-errc/" target="_blank" class="linkedin-header-btn" aria-label="LinkedIn da ERRC">
-                <svg viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                LinkedIn
-            </a>
-        </div>
-    </header>
-
-    <section class="banner">
-        <h1>Cronograma do Evento</h1>
-        <p>Palestras, minicursos, oficinas e sessões técnicas do ERRC 2026.</p>
-    </section>
-
-    <main>
-        <div class="dia-seletor" id="botoes-dias">
-            <button class="dia-btn active" data-target="quarta">Quarta-feira (21/10)</button>
-            <button class="dia-btn" data-target="quinta">Quinta-feira (22/10)</button>
-        </div>
-
-        <div class="cronograma-container">
-
-            <!-- QUARTA-FEIRA -->
-            <div id="quarta" class="dia-conteudo active">
-                <div class="item-cronograma">
-                    <div class="horario">08:30 – 09:00</div>
-                    <div class="detalhes">
-                        <h3>Credenciamento</h3>
-                        <p>Recepção dos participantes, confirmação de inscrições e entrega de materiais.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">09:00 – 10:00</div>
-                    <div class="detalhes">
-                        <h3>Palestra de Abertura - Eder John Scheid</h3>
-                        <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/eder.gif" alt="Foto do Prof. Eder" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">Eder John Scheid</span>
-                                <p class="palestrante-bio">Professor na UFRGS e PhD pela Universidade de Zurique com foco em blockchains, Eder pesquisa contratos inteligentes, sistemas distribuídos e segurança cibernética, acumulando liderança e participação em diversos projetos internacionais de aplicação da tecnologia.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="Eder John Scheid" 
-                                        data-titulo="Medindo a Internet: Procurando Descentralização, Encontrando Dependências"
-                                        data-sinopse="A Internet nasceu com a premissa de ser aberta, distribuída, resiliente e sem um controle global sobre seu desenvolvimento. Essas características contribuíram para sua ampla adoção e consolidação como uma infraestrutura essencial à sociedade. Entretanto, sua evolução revela um paradoxo: enquanto sua arquitetura permite diferentes formas de descentralização, serviços e infraestruturas essenciais estão cada vez mais concentrados nas mãos de poucos atores. Nesse contexto, emergem questões relacionadas à privacidade, à autonomia e à soberania digital. Nesta palestra, serão apresentados resultados de pesquisas que investigam a centralização da Internet a partir de dois componentes fundamentais de sua infraestrutura: o DNS e o ecossistema de emissão de certificados SSL/TLS. Por meio de medições e análises, serão discutidos os níveis de concentração e as dependências existentes nesses ecossistemas, bem como suas implicações para a privacidade e a soberania digital.">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">10:00 – 11:00</div>
-                    <div class="detalhes">
-                        <h3>Coffee Break & Podcast com a empresa FORTE</h3>
-                        <p>Espaço de integração, networking e gravação/transmissão do Podcast com a empresa FORTE.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">11:00 – 12:00</div>
-                    <div class="detalhes">
-                        <h3>Palestra de Empresa (FORTE) - José Luiz</h3>
-                        <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/jose_luiz.png" alt="Foto de José Luiz" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">José Luiz Rodrigues Filho</span>
-                                <p class="palestrante-bio">Líder da Forte Security e da Privacy21 com mais de 15 anos de experiência em Tecnologia da Informação e Cibersegurança, atua na proteção de ativos digitais, gestão de sistemas operativos e estratégias avançadas de segurança da informação e inteligência artificial.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="José Luiz Rodrigues Filho" 
-                                        data-titulo="Em definição..."
-                                        data-sinopse="...">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">12:00 – 14:00</div>
-                    <div class="detalhes">
-                        <h3>Almoço - Intervalo</h3>
-                        <p>Pausa livre para alimentação.</p>
-                        <span class="tipo-tag tag-social">Intervalo</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">14:00 – 15:00</div>
-                    <div class="detalhes">
-                        <h3>Atividades em Paralelo</h3>
-                        <div class="sub-atividades">
-                            <div class="sub-item">
-                                <strong>Palestra - Cesar Loureiro</strong>
-                                <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
-                                <div class="palestrante-box">
-                                    <img src="assets/img/cesar-loureiro.png" alt="Foto de Cesar Loureiro" class="palestrante-foto">
-                                    <div class="palestrante-info">
-                                        <span class="palestrante-nome">Cesar Augusto Hass Loureiro</span>
-                                        <p class="palestrante-bio">Mestre em Ciência da Computação pela UFRGS e professor do IFRS – Campus Porto Alegre. Atua como colaborador do Ponto de Presença da RNP no Rio Grande do Sul e como coordenador técnico da MetroPOA.</p>
-                                        <button class="btn-sinopse" 
-                                                data-palestrante="Cesar Augusto Hass Loureiro" 
-                                                data-titulo="NAT e CGNAT: O Preço da Sobrevida do IPv4"
-                                                data-sinopse="A apresentação abordará a evolução do NAT, desde sua criação como resposta emergencial à escassez de endereços IPv4 até a adoção do CGNAT pelas operadoras...">
-                                            Ver Detalhes da Palestra
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sub-item">
-                                <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
-                                <span class="local">📍 Local: Sala 1 e Sala 2</span>
-                                <p>Apresentação oral dos artigos científicos selecionados.</p>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-tecnica">Sessão Técnica / Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">15:00 – 16:00</div>
-                    <div class="detalhes">
-                        <h3>Palestra de Empresa (Quaza Tecnologia) - Pedro Wessel</h3>
-                        <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/pedro_quaza.png" alt="Foto de Pedro" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">Pedro Wessel</span>
-                                <p class="palestrante-bio">Graduado em Redes de Computadores pela UFSM, pesquisador com trabalhos apresentados no Reino Unido e empreendedor no setor de tecnologia, atuando como fundador da Quaza Tecnologia.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="Pedro Wessel" 
-                                        data-titulo="Em definição..."
-                                        data-sinopse="...">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">16:00 – 16:30</div>
-                    <div class="detalhes">
-                        <h3>Coffee Break</h3>
-                        <p>Espaço de integração e networking entre os participantes.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">16:30 – 17:30</div>
-                    <div class="detalhes">
-                        <h3>Palestra de Empresa (Banrisul) - Alexandre Timm Vieira</h3>
-                        <span class="local">📍 Local: Auditório INPE</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/alexandre_timm.png" alt="Foto de Alexandre Vieira" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">Alexandre Timm Vieira</span>
-                                <p class="palestrante-bio">Gerente Executivo de Segurança de TI no Banrisul e professor universitário com 22 anos de experiência, é Mestre em Engenharia Elétrica pela PUCRS.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="Alexandre Timm Vieira" 
-                                        data-titulo="Em definição..."
-                                        data-sinopse="...">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">18:00 – 19:00</div>
-                    <div class="detalhes">
-                        <h3>Cerimônia de Abertura Oficial</h3>
-                        <span class="local">📍 Local: Auditório CTISM</span>
-                        <span class="tipo-tag tag-palestra">Solenidade</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">19:30 – 21:30</div>
-                    <div class="detalhes">
-                        <h3>Coquetel de Boas-vindas / Confraternização</h3>
-                        <p>Momento de confraternização oficial e recepção da comunidade acadêmica.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- QUINTA-FEIRA -->
-            <div id="quinta" class="dia-conteudo">
-                <div class="item-cronograma">
-                    <div class="horario">08:30 – 09:30</div>
-                    <div class="detalhes">
-                        <h3>Palestra - Juliana Vizzotto</h3>
-                        <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/juliana_vizzotto.gif" alt="Foto de Juliana Vizzotto" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">Juliana Kaizer Vizzotto</span>
-                                <p class="palestrante-bio">Doutora e Mestra em Ciência da Computação pela UFRGS (com período na Indiana University) e Bacharel pela UCPel, a docente atua no DLSC/UFSM e é especialista em Computação Quântica, Teoria da Computação e Semântica Formal.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="Juliana Kaizer Vizzotto" 
-                                        data-titulo="Em definição..."
-                                        data-sinopse="...">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">09:30 – 12:00</div>
-                    <div class="detalhes">
-                        <h3>Minicursos Simultâneos</h3>
-                        <div class="sub-atividades">
-                            <div class="sub-item">
-                                <strong>Minicurso 1 - Computação Forense: Conceitos, Práticas e Oportunidades de Pesquisa</strong>
-                                <p><strong>Autor:</strong> Ricardo Tombesi</p>
-                                <span class="local">⏱️ Horário: 09:30 – 12:00</span>
-                            </div>
-                            <div class="sub-item">
-                                <strong>Minicurso 2 - Machine Learning Meets Networks: um guia prático para aplicações de aprendizado de máquina em redes sem fio e IoT</strong>
-                                <p><strong>Autor:</strong> Lorenzo Donatti</p>
-                                <span class="local">⏱️ Horário: 09:30 – 12:00</span>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-minicurso">Minicursos</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">10:30 – 11:00</div>
-                    <div class="detalhes">
-                        <h3>Coffee Break</h3>
-                        <p>Pausa intercalada durante a realização dos minicursos.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">12:00 – 14:00</div>
-                    <div class="detalhes">
-                        <h3>Almoço - Intervalo</h3>
-                        <p>Pausa livre para alimentação.</p>
-                        <span class="tipo-tag tag-social">Intervalo</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">14:00 – 15:00</div>
-                    <div class="detalhes">
-                        <h3>Palestra - Estefânia Pianoski</h3>
-                        <span class="local">📍 Local: Auditório SAB</span>
-                        <div class="palestrante-box">
-                            <img src="assets/img/estefania.jpg" alt="Foto de Estefânia Pianoski" class="palestrante-foto">
-                            <div class="palestrante-info">
-                                <span class="palestrante-nome">Estefânia Pianoski</span>
-                                <p class="palestrante-bio">Mestre em Engenharia da Informação pela UFABC, especialista em Gestão em Segurança da Informação e Coordenadora de P&D em Cibersegurança na RNP.</p>
-                                <button class="btn-sinopse" 
-                                        data-palestrante="Estefânia Pianoski" 
-                                        data-titulo="Em definição..."
-                                        data-sinopse="...">
-                                    Ver Detalhes da Palestra
-                                </button>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-palestra">Palestra</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">15:00 – 15:30</div>
-                    <div class="detalhes">
-                        <h3>Coffee Break</h3>
-                        <p>Espaço de integração e networking entre os participantes.</p>
-                        <span class="tipo-tag tag-social">Social</span>
-                    </div>
-                </div>
-
-                <div class="item-cronograma">
-                    <div class="horario">15:30 – 17:00</div>
-                    <div class="detalhes">
-                        <h3>Sessões Técnicas</h3>
-                        <div class="sub-atividades">
-                            <div class="sub-item">
-                                <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
-                                <span class="local">📍 Local: Sala 1, Sala 2 e Sala 3</span>
-                                <p>Apresentação oral dos artigos científicos selecionados.</p>
-                            </div>
-                        </div>
-                        <span class="tipo-tag tag-tecnica">Sessão Técnica</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <div id="modalPalestra" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
-            <span class="modal-tag">Detalhes da Palestra</span>
-            <h3 id="modalTitulo">Título da Palestra</h3>
-            <p class="modal-palestrante" id="modalPalestrante">Palestrante: Nome</p>
-            <hr class="modal-divider">
-            <div class="modal-sinopse-label">Sinopse</div>
-            <p class="modal-sinopse-texto" id="modalSinopse">Texto da sinopse...</p>
-        </div>
+    <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/img/logo_errc_2026.png" alt="Logo ERRC 2026">
+        </a>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-coluna">
-                <h3>Realização</h3>
-                <img class="logo-footer-remoto" src="assets/img/logo_sbc.png" alt="Logo SBC">
-            </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <div class="footer-coluna">
-                <h3>Organização</h3>
-                <div class="logos-lado-a-lado">
-                    <img class="logo-footer-remoto" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
-                    <img class="logo-footer-remoto" src="assets/img/ctism.png" alt="Logo CTISM">
+    <div class="nav-container" id="navContainer">
+        <nav aria-label="Menu Principal">
+            <a href="Sobre.html">Sobre</a>
+            <a href="Localizacao.html">Localização</a>
+            <a href="Programacao.html" style="background: #3a71c4;">Programação</a>
+            <a href="Inscricoes.html">Inscrições</a>
+            <a href="Chamada.html">Chamada p/ Trabalhos</a>
+            <a href="Organizacao.html">Organização</a>
+        </nav>
+        <a href="https://linkedin.com/company/escoladeredes-errc/" target="_blank" class="linkedin-header-btn" aria-label="LinkedIn da ERRC">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+        </a>
+    </div>
+</header>
+
+<section class="banner">
+    <h1>Cronograma do Evento</h1>
+    <p>Palestras, minicursos, oficinas e sessões técnicas do ERRC 2026.</p>
+</section>
+
+<main>
+    <div class="dia-seletor" id="botoes-dias">
+        <button class="dia-btn active" data-target="quarta">Quarta-feira (21/10)</button>
+        <button class="dia-btn" data-target="quinta">Quinta-feira (22/10)</button>
+    </div>
+
+    <div class="cronograma-container">
+
+        <!-- QUARTA-FEIRA -->
+        <div id="quarta" class="dia-conteudo active">
+            <div class="item-cronograma">
+                <div class="horario">08:30 – 09:00</div>
+                <div class="detalhes">
+                    <h3>Credenciamento</h3>
+                    <p>Recepção dos participantes, confirmação de inscrições e entrega de materiais.</p>
+                    <span class="tipo-tag tag-social">Social</span>
                 </div>
             </div>
 
-            <div class="footer-coluna">
-                <h3>Contato</h3>
-                <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
-                <a href="mailto:errc2026@redes.ufsm.br">errc2026@redes.ufsm.br</a>
-                <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.64.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                </a>
+            <div class="item-cronograma">
+                <div class="horario">09:00 – 10:00</div>
+                <div class="detalhes">
+                    <h3>Palestra de Abertura - Eder John Scheid</h3>
+                    <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/eder.gif" alt="Foto do Prof. Eder" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">Eder John Scheid</span>
+                            <p class="palestrante-bio">Professor na UFRGS e PhD pela Universidade de Zurique com foco em blockchains, Eder pesquisa contratos inteligentes, sistemas distribuídos e segurança cibernética, acumulando liderança e participação em diversos projetos internacionais de aplicação da tecnologia.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="Eder John Scheid" 
+                                    data-titulo="Medindo a Internet: Procurando Descentralização, Encontrando Dependências"
+                                    data-sinopse="A Internet nasceu com a premissa de ser aberta, distribuída, resiliente e sem um controle global sobre seu desenvolvimento. Essas características contribuíram para sua ampla adoção e consolidação como uma infraestrutura essencial à sociedade. Entretanto, sua evolução revela um paradoxo: enquanto sua arquitetura permite diferentes formas de descentralização, serviços e infraestruturas essenciais estão cada vez mais concentrados nas mãos de poucos atores. Nesse contexto, emergem questões relacionadas à privacidade, à autonomia e à soberania digital. Nesta palestra, serão apresentados resultados de pesquisas que investigam a centralização da Internet a partir de dois componentes fundamentais de sua infraestrutura: o DNS e o ecossistema de emissão de certificados SSL/TLS. Por meio de medições e análises, serão discutidos os níveis de concentração e as dependências existentes nesses ecossistemas, bem como suas implicações para a privacidade e a soberania digital.">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">10:00 – 11:00</div>
+                <div class="detalhes">
+                    <h3>Coffee Break & Podcast com a empresa FORTE</h3>
+                    <p>Espaço de integração, networking e gravação/transmissão do Podcast com a empresa FORTE.</p>
+                    <span class="tipo-tag tag-social">Social</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">11:00 – 12:00</div>
+                <div class="detalhes">
+                    <h3>Palestra de Empresa (FORTE) - José Luiz</h3>
+                    <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/jose_luiz.png" alt="Foto de José Luiz" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">José Luiz Rodrigues Filho</span>
+                            <p class="palestrante-bio">Líder da Forte Security e da Privacy21 com mais de 15 anos de experiência em Tecnologia da Informação e Cibersegurança, atua na proteção de ativos digitais, gestão de sistemas operativos e estratégias avançadas de segurança da informação e inteligência artificial.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="José Luiz Rodrigues Filho" 
+                                    data-titulo="Em definição..."
+                                    data-sinopse="...">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">12:00 – 14:00</div>
+                <div class="detalhes">
+                    <h3>Almoço - Intervalo</h3>
+                    <p>Pausa livre para alimentação.</p>
+                    <span class="tipo-tag tag-social">Intervalo</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">14:00 – 15:00</div>
+                <div class="detalhes">
+                    <h3>Atividades em Paralelo</h3>
+                    <div class="sub-atividades">
+                        <div class="sub-item">
+                            <strong>Palestra - Cesar Loureiro</strong>
+                            <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
+                            <div class="palestrante-box">
+                                <img src="assets/img/cesar-loureiro.png" alt="Foto de Cesar Loureiro" class="palestrante-foto">
+                                <div class="palestrante-info">
+                                    <span class="palestrante-nome">Cesar Augusto Hass Loureiro</span>
+                                    <p class="palestrante-bio">Mestre em Ciência da Computação pela UFRGS e professor do IFRS – Campus Porto Alegre. Atua como colaborador do Ponto de Presença da RNP no Rio Grande do Sul e como coordenador técnico da MetroPOA.</p>
+                                    <button class="btn-sinopse" 
+                                            data-palestrante="Cesar Augusto Hass Loureiro" 
+                                            data-titulo="NAT e CGNAT: O Preço da Sobrevida do IPv4"
+                                            data-sinopse="A apresentação abordará a evolução do NAT, desde sua criação como resposta emergencial à escassez de endereços IPv4 até a adoção do CGNAT pelas operadoras...">
+                                        Ver Detalhes da Palestra
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-item">
+                            <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
+                            <span class="local">📍 Local: Sala 1 e Sala 2</span>
+                            <p>Apresentação oral dos artigos científicos selecionados.</p>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-tecnica">Sessão Técnica / Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">15:00 – 16:00</div>
+                <div class="detalhes">
+                    <h3>Palestra de Empresa (Quaza Tecnologia) - Pedro Wessel</h3>
+                    <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/pedro_quaza.png" alt="Foto de Pedro" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">Pedro Wessel</span>
+                            <p class="palestrante-bio">Graduado em Redes de Computadores pela UFSM, pesquisador com trabalhos apresentados no Reino Unido e empreendedor no setor de tecnologia, atuando como fundador da Quaza Tecnologia.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="Pedro Wessel" 
+                                    data-titulo="Em definição..."
+                                    data-sinopse="...">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">16:00 – 16:30</div>
+                <div class="detalhes">
+                    <h3>Coffee Break</h3>
+                    <p>Espaço de integração e networking entre os participantes.</p>
+                    <span class="tipo-tag tag-social">Social</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">16:30 – 17:30</div>
+                <div class="detalhes">
+                    <h3>Palestra de Empresa (Banrisul) - Alexandre Timm Vieira</h3>
+                    <span class="local">📍 Local: Auditório INPE</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/alexandre_timm.png" alt="Foto de Alexandre Vieira" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">Alexandre Timm Vieira</span>
+                            <p class="palestrante-bio">Gerente Executivo de Segurança de TI no Banrisul e professor universitário com 22 anos de experiência, é Mestre em Engenharia Elétrica pela PUCRS.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="Alexandre Timm Vieira" 
+                                    data-titulo="Em definição..."
+                                    data-sinopse="...">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">18:00 – 19:00</div>
+                <div class="detalhes">
+                    <h3>Cerimônia de Abertura Oficial</h3>
+                    <span class="local">📍 Local: Auditório CTISM</span>
+                    <span class="tipo-tag tag-palestra">Solenidade</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">19:30 – 21:30</div>
+                <div class="detalhes">
+                    <h3>Coquetel de Boas-vindas / Confraternização</h3>
+                    <p>Momento de confraternização oficial e recepção da comunidade acadêmica.</p>
+                    <span class="tipo-tag tag-social">Social</span>
+                </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
+
+        <!-- QUINTA-FEIRA -->
+        <div id="quinta" class="dia-conteudo">
+            <div class="item-cronograma">
+                <div class="horario">08:30 – 09:30</div>
+                <div class="detalhes">
+                    <h3>Palestra - Juliana Vizzotto</h3>
+                    <span class="local">📍 Local: Auditório CTISM (Prédio 5)</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/juliana_vizzotto.gif" alt="Foto de Juliana Vizzotto" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">Juliana Kaizer Vizzotto</span>
+                            <p class="palestrante-bio">Doutora e Mestra em Ciência da Computação pela UFRGS (com período na Indiana University) e Bacharel pela UCPel, a docente atua no DLSC/UFSM e é especialista em Computação Quântica, Teoria da Computação e Semântica Formal.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="Juliana Kaizer Vizzotto" 
+                                    data-titulo="Em definição..."
+                                    data-sinopse="...">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">09:30 – 12:00</div>
+                <div class="detalhes">
+                    <h3>Minicursos Simultâneos</h3>
+                    <div class="sub-atividades">
+                        <div class="sub-item">
+                            <strong>Minicurso 1 - Computação Forense: Conceitos, Práticas e Oportunidades de Pesquisa</strong>
+                            <p><strong>Autor:</strong> Ricardo Tombesi</p>
+                            <span class="local">⏱️ Horário: 09:30 – 12:00</span>
+                        </div>
+                        <div class="sub-item">
+                            <strong>Minicurso 2 - Federated Learning em Redes IoT: Monitoramento e Experimentação em Condições de Redes Adversas</strong>
+                            <p><strong>Autor:</strong> Ronaldo Nascimento</p>
+                            <span class="local">⏱️ Horário: 09:30 – 12:00</span>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-minicurso">Minicursos</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">10:30 – 11:00</div>
+                <div class="detalhes">
+                    <h3>Coffee Break</h3>
+                    <p>Pausa intercalada durante a realização dos minicursos.</p>
+                    <span class="tipo-tag tag-social">Social</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">12:00 – 14:00</div>
+                <div class="detalhes">
+                    <h3>Almoço - Intervalo</h3>
+                    <p>Pausa livre para alimentação.</p>
+                    <span class="tipo-tag tag-social">Intervalo</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">14:00 – 15:00</div>
+                <div class="detalhes">
+                    <h3>Palestra - Estefânia Pianoski</h3>
+                    <span class="local">📍 Local: Auditório SAB</span>
+                    <div class="palestrante-box">
+                        <img src="assets/img/estefania.jpg" alt="Foto de Estefânia Pianoski" class="palestrante-foto">
+                        <div class="palestrante-info">
+                            <span class="palestrante-nome">Estefânia Pianoski</span>
+                            <p class="palestrante-bio">Mestre em Engenharia da Informação pela UFABC, especialista em Gestão em Segurança da Informação e Coordenadora de P&D em Cibersegurança na RNP.</p>
+                            <button class="btn-sinopse" 
+                                    data-palestrante="Estefânia Pianoski" 
+                                    data-titulo="Em definição..."
+                                    data-sinopse="...">
+                                Ver Detalhes da Palestra
+                            </button>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-palestra">Palestra</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">15:00 – 15:30</div>
+                <div class="detalhes">
+                    <h3>Coffee Break</h3>
+                    <p>Espaço de integração e networking entre os participantes.</p>
+                    <span class="tipo-tag tag-social">Social</span>
+                </div>
+            </div>
+
+            <div class="item-cronograma">
+                <div class="horario">15:30 – 17:00</div>
+                <div class="detalhes">
+                    <h3>Atividades em Paralelo</h3>
+                    <div class="sub-atividades">
+                        <div class="sub-item">
+                            <strong>Minicurso 3 - Machine Learning Meets Networks: um guia prático para aplicações de aprendizado de máquina em redes sem fio e IoT</strong>
+                            <p><strong>Autor:</strong> Lorenzo Donatti</p>
+                            <span class="local">⏱️ Horário: 15:30 – 17:00</span>
+                        </div>
+                        <div class="sub-item">
+                            <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
+                            <span class="local">📍 Local: Sala 1, Sala 2 e Sala 3</span>
+                            <p>Apresentação oral dos artigos científicos selecionados.</p>
+                        </div>
+                    </div>
+                    <span class="tipo-tag tag-tecnica">Sessão Técnica / Minicurso</span>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
+    </div>
+</main>
 
-            // Menu Mobile Toggle
-            const menuToggle = document.getElementById('menuToggle');
-            const navContainer = document.getElementById('navContainer');
+<div id="modalPalestra" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
+        <span class="modal-tag">Detalhes da Palestra</span>
+        <h3 id="modalTitulo">Título da Palestra</h3>
+        <p class="modal-palestrante" id="modalPalestrante">Palestrante: Nome</p>
+        <hr class="modal-divider">
+        <div class="modal-sinopse-label">Sinopse</div>
+        <p class="modal-sinopse-texto" id="modalSinopse">Texto da sinopse...</p>
+    </div>
+</div>
 
-            if (menuToggle && navContainer) {
-                menuToggle.addEventListener('click', () => {
-                    menuToggle.classList.toggle('active');
-                    navContainer.classList.toggle('active');
-                });
-            }
+<footer>
+    <div class="footer-container">
+        <div class="footer-coluna">
+            <h3>Realização</h3>
+            <img class="logo-footer-remoto" src="assets/img/logo_sbc.png" alt="Logo SBC">
+        </div>
 
-            // Seleção de Dias (Quarta / Quinta)
-            const botoes = document.querySelectorAll('.dia-btn');
-            const conteudos = document.querySelectorAll('.dia-conteudo');
+        <div class="footer-coluna">
+            <h3>Organização</h3>
+            <div class="logos-lado-a-lado">
+                <img class="logo-footer-remoto" src="https://www.ufsm.br/app/themes/ufsm/images/brasao.svg" alt="Logo UFSM">
+                <img class="logo-footer-remoto" src="assets/img/ctism.png" alt="Logo CTISM">
+            </div>
+        </div>
 
-            botoes.forEach(botao => {
-                botao.addEventListener('click', () => {
-                    botoes.forEach(b => b.classList.remove('active'));
-                    botao.classList.add('active');
+        <div class="footer-coluna">
+            <h3>Contato</h3>
+            <p>Ajude a fortalecer a ERRC. Colabore e divulgue sua marca.</p>
+            <a href="mailto:errc2026@redes.ufsm.br">errc2026@redes.ufsm.br</a>
+            <a href="https://www.instagram.com/errc_escoladeredes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-link" aria-label="Instagram do Evento">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.64.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2026 ERRC - Escola Regional de Redes de Computadores. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
-                    const alvo = botao.getAttribute('data-target');
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
 
-                    conteudos.forEach(conteudo => {
-                        if (conteudo.id === alvo) {
-                            conteudo.classList.add('active');
-                        } else {
-                            conteudo.classList.remove('active');
-                        }
-                    });
-                });
+        // Menu Mobile Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.getElementById('navContainer');
+
+        if (menuToggle && navContainer) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navContainer.classList.toggle('active');
             });
+        }
 
-            // Lógica do Pop-up (Modal) para Título e Sinopse
-            const modal = document.getElementById('modalPalestra');
-            const modalClose = document.getElementById('modalClose');
-            const modalTitulo = document.getElementById('modalTitulo');
-            const modalPalestrante = document.getElementById('modalPalestrante');
-            const modalSinopse = document.getElementById('modalSinopse');
+        // Seleção de Dias (Quarta / Quinta)
+        const botoes = document.querySelectorAll('.dia-btn');
+        const conteudos = document.querySelectorAll('.dia-conteudo');
 
-            const btnsSinopse = document.querySelectorAll('.btn-sinopse');
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                botoes.forEach(b => b.classList.remove('active'));
+                botao.classList.add('active');
 
-            btnsSinopse.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const palestrante = btn.getAttribute('data-palestrante');
-                    const titulo = btn.getAttribute('data-titulo');
-                    const sinopse = btn.getAttribute('data-sinopse');
+                const alvo = botao.getAttribute('data-target');
 
-                    if (modalPalestrante) modalPalestrante.textContent = 'Palestrante: ' + palestrante;
-                    if (modalTitulo) modalTitulo.textContent = titulo;
-                    if (modalSinopse) modalSinopse.textContent = sinopse;
-
-                    if (modal) modal.classList.add('active');
-                });
-            });
-
-            // Fechar modal ao clicar no botão X
-            if (modalClose) {
-                modalClose.addEventListener('click', () => {
-                    modal.classList.remove('active');
-                });
-            }
-
-            // Fechar modal ao clicar fora da caixa branca
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        modal.classList.remove('active');
+                conteudos.forEach(conteudo => {
+                    if (conteudo.id === alvo) {
+                        conteudo.classList.add('active');
+                    } else {
+                        conteudo.classList.remove('active');
                     }
                 });
-            }
+            });
+        });
 
-            // Fechar modal ao pressionar a tecla ESC
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+        // Lógica do Pop-up (Modal) para Título e Sinopse
+        const modal = document.getElementById('modalPalestra');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitulo = document.getElementById('modalTitulo');
+        const modalPalestrante = document.getElementById('modalPalestrante');
+        const modalSinopse = document.getElementById('modalSinopse');
+
+        const btnsSinopse = document.querySelectorAll('.btn-sinopse');
+
+        btnsSinopse.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const palestrante = btn.getAttribute('data-palestrante');
+                const titulo = btn.getAttribute('data-titulo');
+                const sinopse = btn.getAttribute('data-sinopse');
+
+                if (modalPalestrante) modalPalestrante.textContent = 'Palestrante: ' + palestrante;
+                if (modalTitulo) modalTitulo.textContent = titulo;
+                if (modalSinopse) modalSinopse.textContent = sinopse;
+
+                if (modal) modal.classList.add('active');
+            });
+        });
+
+        // Fechar modal ao clicar no botão X
+        if (modalClose) {
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        }
+
+        // Fechar modal ao clicar fora da caixa branca
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
                     modal.classList.remove('active');
                 }
             });
+        }
 
+        // Fechar modal ao pressionar a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+            }
         });
-    </script>
+
+    });
+</script>
+                                                        
 </body>
 </html>
