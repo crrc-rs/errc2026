@@ -94,17 +94,17 @@
             box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
         }
 
-.menu-toggle.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-}
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
 
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
 
-.menu-toggle.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-}
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
 
         .banner { 
             text-align: center; 
@@ -161,7 +161,29 @@
         .btn-ecos { background: #28a745; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); }
         .btn-jems { background: #1a5c9e; box-shadow: 0 4px 15px rgba(26, 92, 158, 0.3); margin-right: 15px; }
         .btn-download { background: #6c757d; box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3); margin-right: 15px; }
+        .btn-termo { background: #e65100; box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3); margin-right: 15px; }
         .btn-action:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        .camera-ready-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffa000;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .camera-ready-box h3 {
+            color: #b78103;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .camera-ready-list {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .camera-ready-list li {
+            margin-bottom: 10px;
+            color: #444;
+        }
 
         footer { 
             padding: 50px 10% 30px 10%; 
@@ -384,12 +406,33 @@
     <main>
         <section class="section-box">
             <h2>Sobre a Chamada</h2>
-                <p>
-                Os artigos submetidos à escola devem conter de <b>4 (quatro) a 6 (seis) páginas</b> em língua portuguesa ou inglesa. A formatação do texto deve seguir o estilo da SBC. Caso o artigo seja escrito em português, será necessário um Abstract em inglês junto com o Resumo em português; caso o artigo seja escrito em inglês, não é necessário Resumo em português, mas é necessário o Abstract em inglês.   
-                <br><br><b>Serão aceitos os trabalhos:</b> artigos completos de no máximo 6 (seis) páginas. O número máximo de páginas inclui resumo, abstract, figuras, diagramas, referências e anexos. Todos artigos submetidos deverão conter nomes dos autores, incluindo suas respectivas afiliações, após o título.
-                </p>
+            <p>
+            Os artigos submetidos à escola devem conter de <b>4 (quatro) a 6 (seis) páginas</b> em língua portuguesa ou inglesa. A formatação do texto deve seguir o estilo da SBC. Caso o artigo seja escrito em português, será necessário um Abstract em inglês junto com o Resumo em português; caso o artigo seja escrito em inglês, não é necessário Resumo em português, mas é necessário o Abstract em inglês.    
+            <br><br><b>Serão aceitos os trabalhos:</b> artigos completos de no máximo 6 (seis) páginas. O número máximo de páginas inclui resumo, abstract, figuras, diagramas, referências e anexos. Todos artigos submetidos deverão conter nomes dos autores, incluindo suas respectivas afiliações, após o título.
+            </p>
         </section>
-        
+
+        <section class="section-box">
+            <h2>Submissão da Versão Final (Camera-Ready)</h2>
+            <div class="camera-ready-box">
+                <h3>📌 Instruções para Artigos Aprovados</h3>
+                <p>Para a publicação do artigo na ERRC 2026, solicitamos que sejam submetidos obrigatoriamente através do sistema <b>JEMS</b> os seguintes arquivos:</p>
+                <br>
+                <ol class="camera-ready-list">
+                    <li><b>Versão final do artigo (camera-ready):</b> incorporando as correções e sugestões decorrentes do processo de avaliação. A submissão deve ser realizada mesmo que o trabalho não tenha recebido sugestões de alterações.</li>
+                    <li><b>Termo de Autorização para Publicação da SBC:</b> devidamente preenchido e <b>ASSINADO</b>.</li>
+                </ol>
+                <p><b>⏰ Prazo para envio:</b> <span style="color: #c62828; font-weight: 800;">13 de outubro de 2026</span>.</p>
+                <br>
+                <p>⚠️ <b>Atenção:</b> Pedimos especial atenção ao prazo, pois a versão final e o termo de autorização são estritamente necessários para a preparação dos anais do evento, bem como para a validação da inscrição de um dos autores. A submissão dos artigos aprovados terá uma <b>taxa extra de R$ 100,00</b>.</p>
+                
+                <div style="margin-top: 15px;">
+                    <a href="https://www.sbc.org.br/wp-content/uploads/2024/07/Autoriza-o-de-Publica-o-CC-BY-4.0-WICS-2020.pdf" target="_blank" class="btn-action btn-termo">Baixar Modelo do Termo SBC (.PDF)</a>
+                    <a href="https://jems3.sbc.org.br/errc2026" target="_blank" class="btn-action btn-jems">Enviar Versão Final no JEMS</a>
+                </div>
+            </div>
+        </section>
+
         <section class="section-box">
             <h2>Datas Importantes</h2>
             <div class="dates-grid">
@@ -406,8 +449,12 @@
                     21 de Setembro 22 de Setembro</s>
                 </div>
                 <div class="date-item">
-                    <strong>Notificação de Aceite dos Artigos:</strong>
-                    <s>28 de Setembro 05 de Outubro</s><br>09 de Outubro
+                    <s><strong>Notificação de Aceite dos Artigos:</strong>
+                    28 de Setembro 05 de Outubro</s><br>09 de Outubro
+                </div>
+                <div class="date-item" style="border-left-color: #ffa000; background: #fff8e1;">
+                    <strong>Envio da Versão Final (Camera-Ready) e Termo SBC:</strong>
+                    13 de Outubro de 2026
                 </div>
             </div>
         </section>
@@ -474,6 +521,7 @@
                 </p>
             </div>
         </section>
+
         <section class="section-box">
             <h2>Instruções para os Autores</h2>
             <p>O template de estilo da SBC está disponível em <a href="assets/modelosparapublicaodeartigos.zip" download>ZIP</a>.
@@ -486,6 +534,7 @@
             </p>
         </section>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-coluna">
@@ -519,14 +568,13 @@
     </footer>
 
     <script>
-        
         const menuToggle = document.getElementById('menuToggle');
-const navContainer = document.getElementById('navContainer');
+        const navContainer = document.getElementById('navContainer');
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navContainer.classList.toggle('active');
-});
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navContainer.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
