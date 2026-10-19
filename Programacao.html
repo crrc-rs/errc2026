@@ -215,6 +215,7 @@
             gap: 6px;
             transition: all 0.2s ease;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 5px;
         }
         .btn-sinopse:hover {
             background: #04294f;
@@ -245,14 +246,14 @@
         .modal-content {
             background: #ffffff;
             width: 100%;
-            max-width: 600px;
+            max-width: 680px;
             border-radius: 12px;
             padding: 30px;
             position: relative;
             box-shadow: 0 15px 35px rgba(0,0,0,0.25);
             transform: translateY(-20px);
             transition: transform 0.3s ease;
-            max-height: 90vh;
+            max-height: 85vh;
             overflow-y: auto;
         }
         .modal-overlay.active .modal-content {
@@ -313,8 +314,40 @@
         }
         .modal-sinopse-texto {
             color: #444;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             line-height: 1.6;
+        }
+
+        .st-sala-block {
+            background: #f8fafc;
+            border-left: 4px solid #1a5c9e;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .st-sala-titulo {
+            font-weight: 800;
+            color: #04294f;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .st-artigo-item {
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .st-artigo-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .st-artigo-titulo {
+            font-weight: 600;
+            color: #2b6cb0;
+        }
+        .st-artigo-autores {
+            font-size: 0.83rem;
+            color: #64748b;
         }
 
         .tipo-tag { 
@@ -603,6 +636,8 @@
                             <span class="palestrante-nome">Eder John Scheid</span>
                             <p class="palestrante-bio">Professor na UFRGS e PhD pela Universidade de Zurique com foco em blockchains, Eder pesquisa contratos inteligentes, sistemas distribuídos e segurança cibernética, acumulando liderança e participação em diversos projetos internacionais de aplicação da tecnologia.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="Eder John Scheid" 
                                     data-titulo="Medindo a Internet: Procurando Descentralização, Encontrando Dependências"
                                     data-sinopse="A Internet nasceu com a premissa de ser aberta, distribuída, resiliente e sem um controle global sobre seu desenvolvimento. Essas características contribuíram para sua ampla adoção e consolidação como uma infraestrutura essencial à sociedade. Entretanto, sua evolução revela um paradoxo: enquanto sua arquitetura permite diferentes formas de descentralização, serviços e infraestruturas essenciais estão cada vez mais concentrados nas mãos de poucos atores. Nesse contexto, emergem questões relacionadas à privacidade, à autonomia e à soberania digital. Nesta palestra, serão apresentados resultados de pesquisas que investigam a centralização da Internet a partir de dois componentes fundamentais de sua infraestrutura: o DNS e o ecossistema de emissão de certificados SSL/TLS. Por meio de medições e análises, serão discutidos os níveis de concentração e as dependências existentes nesses ecossistemas, bem como suas implicações para a privacidade e a soberania digital.">
@@ -634,6 +669,8 @@
                             <span class="palestrante-nome">José Luiz Rodrigues Filho</span>
                             <p class="palestrante-bio">Líder da Forte Security e da VencyOne com mais de 15 anos de experiência em Tecnologia da Informação e Cibersegurança, atua na proteção de ativos digitais, gestão de sistemas operativos e estratégias avançadas de segurança da informação e inteligência artificial.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="José Luiz Rodrigues Filho" 
                                     data-titulo="Em definição..."
                                     data-sinopse="...">
@@ -668,6 +705,8 @@
                                     <span class="palestrante-nome">Cesar Augusto Hass Loureiro</span>
                                     <p class="palestrante-bio">Mestre em Ciência da Computação pela UFRGS e professor do IFRS – Campus Porto Alegre. Atua como colaborador do Ponto de Presença da RNP no Rio Grande do Sul e como coordenador técnico da MetroPOA.</p>
                                     <button class="btn-sinopse" 
+                                            data-tag="Detalhes da Palestra"
+                                            data-label="Sinopse"
                                             data-palestrante="Cesar Augusto Hass Loureiro" 
                                             data-titulo="NAT e CGNAT: O Preço da Sobrevida do IPv4"
                                             data-sinopse="A apresentação abordará a evolução do NAT, desde sua criação como resposta emergencial à escassez de endereços IPv4 até a adoção do CGNAT pelas operadoras, destacando seus impactos sobre a conectividade, segurança, rastreabilidade e prestação de serviços. A palestra também diferenciará os conceitos de tradução de endereços, controle de estado e políticas de firewall, explicando o uso compartilhado de portas e os desafios introduzidos pelo crescimento exponencial das conexões simultâneas — cenários para os quais muitas redes não estão preparadas. Ao final, serão discutidas métricas operacionais, boas práticas e a necessidade de evoluir novamente para uma conectividade fim a fim.">
@@ -678,8 +717,96 @@
                         </div>
                         <div class="sub-item">
                             <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
-                            <span class="local">📍 Local: Sala 1 e Sala 2</span>
+                            <span class="local">📍 Local: Salas 1, 2, 3 e 4 | ⏱️ Horário da Sessão: 14:00 – 15:00</span>
                             <p>Apresentação oral dos artigos científicos selecionados.</p>
+                            <button class="btn-sinopse" 
+                                    data-tag="Sessão Técnica (21/10)"
+                                    data-label="Artigos Selecionados e Salas"
+                                    data-palestrante="Quarta-feira (21/10) | Horário da Sessão: 14:00 às 15:00"
+                                    data-titulo="Apresentação de Artigos Científicos"
+                                    data-sinopse="
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 1 — Medição da Internet, Criptografia Pós-Quântica e Blockchain</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#35999: Measuring Post-Quantum TLS Adoption in...</div>
+                                            <div class='st-artigo-autores'>Autores: Jhonatan Jauja Ccana, Eder John Scheid</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36368: Uma Solução Baseada em Blockchain para...</div>
+                                            <div class='st-artigo-autores'>Autores: Victor Octávio Rodrigues Alves, Eder John Scheid, Muriel Figueredo Franco</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#35525: Exploring User Experience in Blockchain...</div>
+                                            <div class='st-artigo-autores'>Autores: Gabriel Berta, Eder John Scheid</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36218: Uma Plataforma Aberta e Instrumentada...</div>
+                                            <div class='st-artigo-autores'>Autores: Michel Silva, Leonardo Pinho</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 2 — Detecção de Intrusão, APTs e Phishing</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36451: Análise da Recorrência de Técnicas e Táticas...</div>
+                                            <div class='st-artigo-autores'>Autores: Charllynson Carvalho Caxias, Brenda Salenave Santana</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36186: Comparação entre estratégias de agregação...</div>
+                                            <div class='st-artigo-autores'>Autores: Jaime Antonio Daniel Filho, Rafael Carneiro Pregardier, Murilo Block, Luis Alvaro de Lima Silva, Carlos Raniery Paula dos Santos</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36260: Análise Paralela de Logs SSH para Identificação...</div>
+                                            <div class='st-artigo-autores'>Autores: Rodrigo Berino Pereira, Ricardo de la Rocha Ladeira</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36067: Phishing Email Detection Using Ensemble...</div>
+                                            <div class='st-artigo-autores'>Autores: Guilherme Kuglin, Ricardo de la Rocha Ladeira</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 3 — Segurança da Informação: LLMs, Malware, CTF e Ensino</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36075: Hands-On LLM Security: A Classroom Experiment...</div>
+                                            <div class='st-artigo-autores'>Autores: Ricardo de la Rocha Ladeira, Lucas Andrei Cancelier Marin, João Vitor Espig, Carlos Eduardo Perini Fidelis, Mickael Reichert, André Vitor</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#35885: A 3D Virtual Laboratory for Teaching Physical...</div>
+                                            <div class='st-artigo-autores'>Autores: Fernanda Ribeiro Martins, Ricardo de la Rocha Ladeira</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36024: O Uso de LLMs na Detecção de Malware...</div>
+                                            <div class='st-artigo-autores'>Autores: Lucas Andrei Cancelier Marin, Ricardo de la Rocha Ladeira</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36323: Análise de Segurança de uma Plataforma...</div>
+                                            <div class='st-artigo-autores'>Autores: Lucas Andrei Cancelier Marin, Guilherme de Campos, Ricardo de la Rocha Ladeira</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 4 — Internet das Coisas e Redes de Sensores</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36307: ICDR-IoT: Integração e Controle de Dispositivos...</div>
+                                            <div class='st-artigo-autores'>Autores: Marco Auth, Pedro Henrique Salvador, Rafael Pereira</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36318: Integração entre middleware IoT e aplicações...</div>
+                                            <div class='st-artigo-autores'>Autores: Eduardo Rodrigues Fortes, Tiago Antonio Rizzetti</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36338: Monitoramento de Hortas Urbanas sem Infraestrutura...</div>
+                                            <div class='st-artigo-autores'>Autores: Lorenzo Michelotti Palma, Lués Pedro Davila Zorzi, Rafael Teodósio Pereira</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36483: Emulação de uma WSN WiFi para Monitoramento...</div>
+                                            <div class='st-artigo-autores'>Autores: Yang da Fontoura Rodrigues, Rodrigo Brandão Mansilha</div>
+                                        </div>
+                                    </div>
+                                    ">
+                                Ver Artigos e Salas da Sessão Técnica
+                            </button>
                         </div>
                     </div>
                     <span class="tipo-tag tag-tecnica">Sessão Técnica / Palestra</span>
@@ -697,20 +824,11 @@
                             <span class="palestrante-nome">Pedro Wessel</span>
                             <p class="palestrante-bio">Graduado em Redes de Computadores pela UFSM, pesquisador com trabalhos apresentados no Reino Unido e empreendedor no setor de tecnologia, atuando como fundador da Quaza Tecnologia.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="Pedro Wessel" 
-                                    data-titulo="Sua próxima colega de
-trabalho é uma IA.
-E agora?"
-                                    data-sinopse="A maioria das pessoas conhece a IA pelo prompt: você pergunta, ela responde. Mas o que
-acontece quando ela ganha acesso a dados e começa a participar da operação de cerca de
-120 provedores de internet?
-Nesta palestra, Pedro Wessel, egresso de Redes de Computadores da UFSM e fundador da
-Quaza Tecnologia, abre os bastidores dessa experiência: como conectar a IA aos sistemas
-com acesso controlado via MCP, colocar agentes para trabalhar em conjunto e automatizar
-o atendimento pelo WhatsApp. Apresenta falhas que a IA encontrou e que passavam
-despercebidas, erros que ela mesma cometeu e o trabalho necessário para conferir suas
-entregas. Casos reais que mostram por que entender de redes se torna ainda mais
-importante quando a IA entra na equipe — inclusive para perceber quando ela está errada.">
+                                    data-titulo="Sua próxima colega de trabalho é uma IA. E agora?"
+                                    data-sinopse="A maioria das pessoas conhece a IA pelo prompt: você pergunta, ela responde. Mas o que acontece quando ela ganha acesso a dados e começa a participar da operação de cerca de 120 provedores de internet?<br><br>Nesta palestra, Pedro Wessel, egresso de Redes de Computadores da UFSM e fundador da Quaza Tecnologia, abre os bastidores dessa experiência: como conectar a IA aos sistemas com acesso controlado via MCP, colocar agentes para trabalhar em conjunto e automatizar o atendimento pelo WhatsApp. Apresenta falhas que a IA encontrou e que passavam despercebidas, erros que ela mesma cometeu e o trabalho necessário para conferir suas entregas. Casos reais que mostram por que entender de redes se torna ainda mais importante quando a IA entra na equipe — inclusive para perceber quando ela está errada.">
                                 Ver Detalhes da Palestra
                             </button>
                         </div>
@@ -739,6 +857,8 @@ importante quando a IA entra na equipe — inclusive para perceber quando ela es
                             <span class="palestrante-nome">Alexandre Timm Vieira</span>
                             <p class="palestrante-bio">Gerente Executivo de Segurança de TI no Banrisul e professor universitário com 22 anos de experiência, é Mestre em Engenharia Elétrica pela PUCRS.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="Alexandre Timm Vieira" 
                                     data-titulo="A nova era da segurança cibernética"
                                     data-sinopse="Na nova era da cibersegurança, atacantes e defensores utilizam inteligência artificial. Mas quem terá a vantagem? Como a IA está mudando os ataques, as defesas e o trabalho dos profissionais de segurança? Esta palestra apresentará as principais transformações da cibersegurança, numa visão prática sobre os principais aspectos, riscos e competências que deverão marcar o futuro dos profissionais de computação e segurança.">
@@ -783,9 +903,11 @@ importante quando a IA entra na equipe — inclusive para perceber quando ela es
                             <span class="palestrante-nome">Juliana Kaizer Vizzotto</span>
                             <p class="palestrante-bio">Doutora e Mestra em Ciência da Computação pela UFRGS (com período na Indiana University) e Bacharel pela UCPel, a docente atua no DLSC/UFSM e é especialista em Computação Quântica, Teoria da Computação e Semântica Formal.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="Juliana Kaizer Vizzotto" 
                                     data-titulo="Criptografia Quântica: Da Física do Qubit à Proteção em Redes"
-                                    data-sinopse="Você sabia que o avanço da computação quântica pode tornar obsoletos os sistemas de segurança que protegem a internet hoje? Nesta palestra  vamos entender como algoritmos quânticos, como Shor, ameaçam padrões consolidados como RSA. Entendendo o Qubit, vamos descobrir como fenômenos da física quântica — superposição, o teorema da não-clonagem e a  medição — criam um escudo inviolável através do protocolo BB84 (QKD), transformando qualquer tentativa de espionagem em um rastro de erro detectável. Vamos conferir como se preparar para esse novo cenário e por onde começar na era da Criptografia Pós-Quântica.">
+                                    data-sinopse="Você sabia que o avanço da computação quântica pode tornar obsoletos os sistemas de segurança que protegem a internet hoje? Nesta palestra vamos entender como algoritmos quânticos, como Shor, ameaçam padrões consolidados como RSA. Entendendo o Qubit, vamos descobrir como fenômenos da física quântica — superposição, o teorema da não-clonagem e a medição — criam um escudo inviolável através do protocolo BB84 (QKD), transformando qualquer tentativa de espionagem em um rastro de erro detectável. Vamos conferir como se preparar para esse novo cenário e por onde começar na era da Criptografia Pós-Quântica.">
                                 Ver Detalhes da Palestra
                             </button>
                         </div>
@@ -802,12 +924,12 @@ importante quando a IA entra na equipe — inclusive para perceber quando ela es
                         <div class="sub-item">
                             <strong>Minicurso 1 - Computação Forense: Conceitos, Práticas e Oportunidades de Pesquisa</strong>
                             <p><strong>Autor:</strong> Ricardo Tombesi</p>
-                            <span class="local">⏱️ Horário: 09:30 – 12:00</span>
+                            <span class="local">⏱️ Horário: 09:30 – 12:00 | 📍 Local: Lab. 304 (Prédio 5C)</span>
                         </div>
                         <div class="sub-item">
                             <strong>Minicurso 2 - Federated Learning em Redes IoT: Monitoramento e Experimentação em Condições de Redes Adversas</strong>
                             <p><strong>Autor:</strong> Ronaldo Nascimento</p>
-                            <span class="local">⏱️ Horário: 09:30 – 12:00</span>
+                            <span class="local">⏱️ Horário: 09:30 – 12:00 | 📍 Local: Lab. 308 (Prédio 5D)</span>
                         </div>
                     </div>
                     <span class="tipo-tag tag-minicurso">Minicursos</span>
@@ -843,11 +965,11 @@ importante quando a IA entra na equipe — inclusive para perceber quando ela es
                             <span class="palestrante-nome">Estefânia Pianoski</span>
                             <p class="palestrante-bio">Mestre em Engenharia da Informação pela UFABC, especialista em Gestão em Segurança da Informação e Coordenadora de P&D em Cibersegurança na RNP.</p>
                             <button class="btn-sinopse" 
+                                    data-tag="Detalhes da Palestra"
+                                    data-label="Sinopse"
                                     data-palestrante="Estefânia Pianoski" 
                                     data-titulo="Carreira em Segurança da Informação: por onde começar?"
-                                    data-sinopse="Segurança da Informação vai muito além da área técnica. Nesta palestra, vamos conhecer diferentes possibilidades de carreira — de Gestão, Governança e Privacidade a DevSecOps, Red Team, Blue Team, SOC e Pesquisa — e entender quais conhecimentos e habilidades podem ajudar quem está começando na área de Tecnologia.
-A partir da minha própria trajetória profissional, vou compartilhar aprendizados, desafios e caminhos possíveis para construir uma carreira em Segurança da Informação, além de dicas sobre certificações, competências e primeiros passos.
-Uma conversa para quem está começando e quer descobrir onde pode chegar.">
+                                    data-sinopse="Segurança da Informação vai muito além da área técnica. Nesta palestra, vamos conhecer diferentes possibilidades de carreira — de Gestão, Governança e Privacidade a DevSecOps, Red Team, Blue Team, SOC e Pesquisa — e entender quais conhecimentos e habilidades podem ajudar quem está começando na área de Tecnologia.<br><br>A partir da minha própria trajetória profissional, vou compartilhar aprendizados, desafios e caminhos possíveis para construir uma carreira em Segurança da Informação, além de dicas sobre certificações, competências e primeiros passos.<br><br>Uma conversa para quem está começando e quer descobrir onde pode chegar.">
                                 Ver Detalhes da Palestra
                             </button>
                         </div>
@@ -873,12 +995,112 @@ Uma conversa para quem está começando e quer descobrir onde pode chegar.">
                         <div class="sub-item">
                             <strong>Minicurso 3 - Machine Learning Meets Networks: um guia prático para aplicações de aprendizado de máquina em redes sem fio e IoT</strong>
                             <p><strong>Autor:</strong> Lorenzo Donatti</p>
-                            <span class="local">⏱️ Horário: 15:30 – 17:00</span>
+                            <span class="local">⏱️ Horário: 15:30 – 17:00 | 📍 Local: Lab. 305 (Prédio 5C)</span>
                         </div>
                         <div class="sub-item">
                             <strong>(ERRC) Seção Técnica - Apresentação dos Artigos</strong>
-                            <span class="local">📍 Local: Sala 1, Sala 2 e Sala 3</span>
+                            <span class="local">📍 Local: Salas 1, 2, 3 e 4 | ⏱️ Horário da Sessão: 15:30 – 17:00</span>
                             <p>Apresentação oral dos artigos científicos selecionados.</p>
+                            <button class="btn-sinopse" 
+                                    data-tag="Sessão Técnica (22/10)"
+                                    data-label="Artigos Selecionados e Salas"
+                                    data-palestrante="Quinta-feira (22/10) | Horário da Sessão: 15:30 às 17:00"
+                                    data-titulo="Apresentação de Artigos Científicos"
+                                    data-sinopse="
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 1 — IA Generativa: Segurança de LLMs e Ensino de Redes</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36383: IA Generativa no Ensino de Redes de Computadores...</div>
+                                            <div class='st-artigo-autores'>Autores: Alex Camargo, Sandra Dutra Piovesan, Érico Amaral</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36412: Avaliando Vazamento de System Prompt em...</div>
+                                            <div class='st-artigo-autores'>Autores: Gabriel Rodrigues da Rocha, Rodrigo Brandão Mansilha</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36332: Mecanismos de Avaliação de Segurança para...</div>
+                                            <div class='st-artigo-autores'>Autores: Emilly Stephanny Silva, Isabela Kremp Narciso, Milton Pagliuso, Marcos Antonio Simplicio Jr, Victor Takashi Hayashi, Charles Christian Miers</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36080: Assessing the Security of 'Vibe Coding'...</div>
+                                            <div class='st-artigo-autores'>Autores: Leandro Retzlaff, Alan M. Schumacher</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36068: Mitigação de Vulnerabilidades de Segurança em...</div>
+                                            <div class='st-artigo-autores'>Autores: Robson Daniel Marchesan, Raul Ceretta Nunes</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 2 — Detecção de Ataques e Anomalias com Aprendizado de Máquina</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36192: CyberEye: Sistema de Detecção de Intrusão...</div>
+                                            <div class='st-artigo-autores'>Autores: Igor Boenavides, Jardel Batista Gonçalves, Matheus Lorenzato Braga</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36173: Investigação da Importância de Atributos para...</div>
+                                            <div class='st-artigo-autores'>Autores: Carlos Lima, Pedro Lui, Lucas Siqueira, Juliano Kazienko, Vagner Ereno Quincozes, Silvio Quincozes, Daniel Welfer</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36265: Para Além das Médias Móveis: Uma Abordagem...</div>
+                                            <div class='st-artigo-autores'>Autores: Denner Ayres, Romulo de Moraes, Giancarlo Lucca, André Riker, Roger Immich, Bruno L. Dalmazo</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36444: Temporizadores Dinâmicos no Plano de Dados...</div>
+                                            <div class='st-artigo-autores'>Autores: Ryan Borges de Leon, Bruno L. Dalmazo</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36436: Planejamento, Implantação e Avaliação de...</div>
+                                            <div class='st-artigo-autores'>Autores: João Pedro Pinto Anony, Suzianne Tormann, Simone Ceolin, Renato Preigschadt de Azevedo</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 3 — Infraestrutura, Planejamento e Gerência de Redes</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36450: Migração da Rede Sem Fio do Colégio Técnico...</div>
+                                            <div class='st-artigo-autores'>Autores: Andre Simon da Silveira, Douglas Böck, Lorenzo Ropke, Tiago Antônio Rizzetti</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36491: NetBox como fonte de verdade para a documentação...</div>
+                                            <div class='st-artigo-autores'>Autores: Lorenzo Basso Ropke, Tiago Antonio Rizzetti, Renato Preigschadt</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36089: NetLab Educacional: Desenvolvimento de...</div>
+                                            <div class='st-artigo-autores'>Autores: Yuri Gonçalves, João Ribeiro</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36492: Planejamento e Otimização de Redes FTTH...</div>
+                                            <div class='st-artigo-autores'>Autores: Diogo Moi, Viviane Cátia Kohler, Olinto de Araújo, Guilherme Dhein</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36298: Técnica Experimental para Mensuração de...</div>
+                                            <div class='st-artigo-autores'>Autores: Davi Lopes Lemos, Naylor Bastiani Perez, Leonardo Pinho</div>
+                                        </div>
+                                    </div>
+
+                                    <div class='st-sala-block'>
+                                        <div class='st-sala-titulo'>📍 Sala 4 — Análise de Ameaças e Segurança Ofensiva</div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36072: Avaliação da Qualidade de Dados Sintéticos...</div>
+                                            <div class='st-artigo-autores'>Autores: Murilo Block, Rafael Carneiro Pregardier, Jaime Antonio Daniel Filho, Carlos Raniery Paula dos Santos, Luis Alvaro de Lima Silva</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36285: Detecção de Ameaças Zero-Day em Tráfego...</div>
+                                            <div class='st-artigo-autores'>Autores: Ezekiel Pincolini Netto, Mikael Fontoura do Nascimento, Gabriel Stiegemeier, Marcia Henke</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#36495: Análise de Segurança de um Sistema de...</div>
+                                            <div class='st-artigo-autores'>Autores: Gabriel Haab, Leandro Beria, Erico M. H. do Amaral</div>
+                                        </div>
+                                        <div class='st-artigo-item'>
+                                            <div class='st-artigo-titulo'>#35528: WrappEm: Uma Ferramenta para Injeção de...</div>
+                                            <div class='st-artigo-autores'>Autores: Augusto Goulart, Edson Machado Fumagalli Junior</div>
+                                        </div>
+                                    </div>
+                                    ">
+                                Ver Artigos e Salas da Sessão Técnica
+                            </button>
                         </div>
                     </div>
                     <span class="tipo-tag tag-tecnica">Sessão Técnica / Minicurso</span>
@@ -892,12 +1114,12 @@ Uma conversa para quem está começando e quer descobrir onde pode chegar.">
 <div id="modalPalestra" class="modal-overlay">
     <div class="modal-content">
         <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
-        <span class="modal-tag">Detalhes da Palestra</span>
-        <h3 id="modalTitulo">Título da Palestra</h3>
+        <span class="modal-tag">Detalhes</span>
+        <h3 id="modalTitulo">Título</h3>
         <p class="modal-palestrante" id="modalPalestrante">Palestrante: Nome</p>
         <hr class="modal-divider">
-        <div class="modal-sinopse-label">Sinopse</div>
-        <p class="modal-sinopse-texto" id="modalSinopse">Texto da sinopse...</p>
+        <div class="modal-sinopse-label">Descrição</div>
+        <div class="modal-sinopse-texto" id="modalSinopse">Conteúdo...</div>
     </div>
 </div>
 
@@ -967,7 +1189,7 @@ Uma conversa para quem está começando e quer descobrir onde pode chegar.">
             });
         });
 
-        // Lógica do Pop-up (Modal) para Título e Sinopse
+        // Lógica do Pop-up (Modal) para Palestras e Sessões Técnicas
         const modal = document.getElementById('modalPalestra');
         const modalClose = document.getElementById('modalClose');
         const modalTitulo = document.getElementById('modalTitulo');
@@ -981,10 +1203,26 @@ Uma conversa para quem está começando e quer descobrir onde pode chegar.">
                 const palestrante = btn.getAttribute('data-palestrante');
                 const titulo = btn.getAttribute('data-titulo');
                 const sinopse = btn.getAttribute('data-sinopse');
+                const tag = btn.getAttribute('data-tag') || 'Detalhes da Palestra';
+                const label = btn.getAttribute('data-label') || 'Sinopse';
 
-                if (modalPalestrante) modalPalestrante.textContent = 'Palestrante: ' + palestrante;
+                const modalTag = modal.querySelector('.modal-tag');
+                const modalSinopseLabel = modal.querySelector('.modal-sinopse-label');
+
+                if (modalTag) modalTag.textContent = tag;
+                if (modalSinopseLabel) modalSinopseLabel.textContent = label;
+
+                if (modalPalestrante) {
+                    if (palestrante) {
+                        modalPalestrante.style.display = 'block';
+                        modalPalestrante.textContent = (palestrante.includes('Quarta-feira') || palestrante.includes('Quinta-feira') || palestrante.includes('Horário')) ? palestrante : 'Palestrante: ' + palestrante;
+                    } else {
+                        modalPalestrante.style.display = 'none';
+                    }
+                }
+
                 if (modalTitulo) modalTitulo.textContent = titulo;
-                if (modalSinopse) modalSinopse.textContent = sinopse;
+                if (modalSinopse) modalSinopse.innerHTML = sinopse;
 
                 if (modal) modal.classList.add('active');
             });
@@ -1015,6 +1253,6 @@ Uma conversa para quem está começando e quer descobrir onde pode chegar.">
 
     });
 </script>
-                                                        
+
 </body>
 </html>
