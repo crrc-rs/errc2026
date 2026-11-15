@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERRC 2026 - 23ª Edição da Escola Regional de Redes de Computadores</title>
@@ -123,7 +123,7 @@
             color: white; 
             text-decoration: none; 
             border-radius: 50px; 
-            font-weight: 800;
+            font-weight: 800; 
             transition: 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             text-transform: uppercase;
@@ -221,6 +221,45 @@
             width: 18px;
             height: 18px;
             fill: currentColor;
+        }
+
+        .grid-certificados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .btn-certificado {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: #ffffff;
+            color: #04294f;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #3a71c4;
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.92rem;
+            transition: all 0.25s ease;
+        }
+
+        .btn-certificado:hover {
+            background: #04294f;
+            color: #ffffff;
+            border-color: #04294f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(4, 41, 79, 0.15);
+        }
+
+        .btn-certificado svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
         }
 
         .conteudo-principal {
@@ -604,82 +643,63 @@
                 <span class="badge-novo">Novo</span>
             </div>
 
-            <!-- Inscrições Abertas para Minicursos -->
-<div class="card-novidade">
-    <h3>Inscrições Abertas para os Minicursos da ERRC 2026!</h3>
-    <p>
-        Garanta a sua vaga nos minicursos práticos da 23ª ERRC. As vagas são <b>limitadas</b> e o preenchimento será realizado por ordem de inscrição.<br><b>AVISO!!! Os minicursos possuem tolerância de 10min de atraso, então, se possível, chegue no horário!</b> Após o horário estabelecido, as portas serão fechadas.
-    </p>
-
-    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 12px;">
-        
-        <!-- Minicurso 1 -->
-        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #3a71c4;">
-            <strong>Minicurso 1: Computação Forense</strong><br>
-            <span style="font-size: 0.85rem; color: #555;">Ministrante: Ricardo Tombesi | Quinta (22/10) - 09:30 às 12:00 | Todas vagas foram ocupadas!</span><br>
-            <span style="display: inline-block; margin-top: 8px; background: #6c757d; color: white; padding: 5px 12px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; cursor: not-allowed;">
-                Vagas Esgotadas
-            </span>
-        </div>
-
-        <!-- Minicurso 2 -->
-        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #3a71c4;">
-            <strong>Minicurso 2: Federated Learning em Redes IoT</strong> <br>
-            <span style="font-size: 0.85rem; color: #555;">Ministrante: Ronaldo Nascimento | Quinta (22/10) - 09:30 às 12:00 | 37 vagas</span><br>
-            <span style="display: inline-block; margin-top: 8px; background: #6c757d; color: white; padding: 5px 12px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; cursor: not-allowed;">
-                Tempo Limite p/ Inscrição Atingido
-            </span>
-        </div>
-
-        <!-- Minicurso 3 -->
-        <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #3a71c4;">
-            <strong>Minicurso 3: Machine Learning Meets Networks</strong> <br>
-            <span style="font-size: 0.85rem; color: #555;">Ministrante: Lorenzo Donatti | Quinta (22/10) - 15:30 às 17:00 | Todas vagas foram ocupadas!</span><br>
-            <span style="display: inline-block; margin-top: 8px; background: #6c757d; color: white; padding: 5px 12px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; cursor: not-allowed;">
-                Vagas Esgotadas
-            </span>
-        </div>
-    </div>
-</div
-    
-    <!-- Confraternização Oficial do Evento -->
-<div class="card-novidade">
-    <h3>Inscrições Encerradas para a Confraternização Oficial 🥩🎉</h3>
-    <p>
-        Agradecemos a todos pelo interesse! As <b>50 vagas</b> para o nosso tradicional churrasco de confraternização foram <b>totalmente preenchidas</b>.
-    </p>
-
-    <div style="background: #f8f9fa; padding: 12px 15px; border-radius: 8px; border-left: 4px solid #dc3545; margin-top: 15px;">
-        <strong>Informações para os Inscritos Confirmados:</strong><br>
-        <span style="font-size: 0.85rem; color: #555;">
-            📅 <b>Data:</b> Quarta-feira (21/10) | ⏰ <b>Horário:</b> 19:30 às 21:30<br>
-            📍 <b>Local:</b> Quiosque do CT (<a href="https://maps.app.goo.gl/SHEFBt4jdN9j4RAB6" target="_blank" style="color: #1a5c9e; font-weight: 700;">link do Maps</a>)<br>
-            🎟️ <b>Status:</b> Vagas Esgotadas (50/50)
-        </span>
-    </div>
-
-    <div style="margin-top: 15px;">
-        <span style="display: inline-block; background: #6c757d; color: white; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 0.9rem; cursor: not-allowed; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-            Inscrições Esgotadas
-        </span>
-    </div>
-
-    <p style="margin-top: 12px; font-size: 0.85rem; color: #666;">
-        * Para mais informações sobre a programação do evento, acesse a aba <a href="Programacao.html">Programação</a>.
-    </p>
-</div>
-            <!-- Inscrições para o Evento (ERRC 2026) -->
+            <!-- Anais do Evento -->
             <div class="card-novidade">
-                <h3>Inscrições para ERRC 2026 estão abertas; Garanta a sua já!</h3>
+                <h3>📚 Anais da ERRC 2026 Publicados!</h3>
                 <p>
-                    Estamos com as inscrições para a Escola Regional de Redes de Computadores já disponíveis! Estudantes de graduação e pós-graduação, professores e profissionais, façam a sua e ajudem a ERRC com o reconhecimento das áreas de Redes de Computadores, Cibersegurança e suas diversas subdivisões.
+                    Os anais oficiais da 23ª Escola Regional de Redes de Computadores já estão disponíveis para consulta pública na plataforma <strong>SBC OpenLib (SOL)</strong>. Confira todos os trabalhos científicos apresentados durante o evento.
                 </p>
-                <a href="https://centraldesistemas.sbc.org.br/ecos/errc2026" target="_blank" class="btn-download">
-                   Inscreva-se na ERRC !
+                <a href="https://sol.sbc.org.br/index.php/errc/" target="_blank" rel="noopener noreferrer" class="btn-download">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                    Acessar Anais do Evento (SOL)
                 </a>
-                <p style="margin-top: 10px; font-size: 0.85rem; color: #666;">
-                    * Para mais informações, acesse a aba <a href="Inscricoes.html">Inscrições</a>.
+            </div>
+
+            <!-- Certificados do Evento -->
+            <div class="card-novidade">
+                <h3>🎓 Acesso aos Certificados — ERRC 2026</h3>
+                <p>
+                    Os certificados de participação, apresentação, premiação e organização já estão disponíveis. Selecione abaixo a categoria correspondente para acessar a pasta no Google Drive:
                 </p>
+
+                <div class="grid-certificados">
+                    <a href="https://drive.google.com/drive/folders/1toMJmEf419SBWNtXER50Dib_Ifoq3oy0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Comissão Organizadora</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1RBZ6N0bA6UNKto91bNzS3XRBHxtWuqGm?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Melhor Artigo e Melhor Apresentação</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/19NZRgJQ1YXea8C7AjXlU8-cWApIfWW3P?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Minicursos</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1cI1cXzpY3g0XT1O3WrPecEn5goQ8CoB6?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Oradores de Palestras</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1mRyRQOIPu8f2O5LZ8thDxEt0hvX5pnAo?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Palestrantes</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1TOLpTrWuqkaSVXYUWzz7EppD2XfuukzN?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Podcast</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1S_zWlSursvYeQ7bE7IetB11wIuPUrjoP?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-certificado">
+                        <span>Sessões Técnicas</span>
+                        <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
